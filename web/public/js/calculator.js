@@ -81,8 +81,8 @@ async function handleSubmit(e) {
     if (!validateForm(formData)) return;
 
     try {
-        // Send to server
-        const response = await fetch('/api/profile', {
+        // Send to server for KNN classification
+        const response = await fetch('/api/classify', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
@@ -91,12 +91,11 @@ async function handleSubmit(e) {
         const result = await response.json();
         
         if (result.success) {
-            displayResults(formData);
+            displayClassificationResults(result);
         }
     } catch (error) {
         console.error('Error:', error);
-        // Still show results even if server fails
-        displayResults(formData);
+        alert('Error al procesar la solicitud. Por favor, inténtelo de nuevo.');
     }
 }
 
@@ -182,6 +181,106 @@ function displayResults(data) {
     formSection.style.display = 'none';
     resultSection.classList.add('visible');
 
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== Display Classification Results =====
+function displayClassificationResults(result) {
+    const { clusterId, clusterInfo, patientData } = result;
+    
+    const resultContainer = document.getElementById('resultSection');
+    
+    // Update result section with cluster-specific content
+    resultContainer.innerHTML = `
+        <div class="cluster-result" style="border-left: 5px solid ${clusterInfo.color};">
+            <div class="result-header">
+                <div class="cluster-badge-large" style="background: ${clusterInfo.color};">
+                    ${clusterId}
+                </div>
+                <div class="result-header-text">
+                    <h2>Grupo: ${clusterInfo.name}</h2>
+                    <p class="remission-rate">
+                        <span class="rate-value">${clusterInfo.remissionRate}%</span> 
+                        tasa de remisión en este grupo
+                    </p>
+                </div>
+            </div>
+            
+            <div class="result-description">
+                <p>${clusterInfo.description}</p>
+            </div>
+            
+            <div class="result-grid">
+                <div class="result-card">
+                    <h3>📊 Tu Perfil</h3>
+                    <div class="profile-summary">
+                        <div class="profile-item">
+                            <span>Edad:</span>
+                            <strong>${patientData.age} años</strong>
+                        </div>
+                        <div class="profile-item">
+                            <span>IMC:</span>
+                            <strong>${patientData.bmi} ${getBMICategory(patientData.bmi)}</strong>
+                        </div>
+                        <div class="profile-item">
+                            <span>Recidiva:</span>
+                            <strong>${patientData.recurrence ? 'Sí' : 'No'}</strong>
+                        </div>
+                        ${patientData.recurrence && patientData.recurrenceTypes.length > 0 ? `
+                            <div class="profile-item">
+                                <span>Tipo:</span>
+                                <strong>${patientData.recurrenceTypes.join(', ')}</strong>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>🔍 Características del Grupo</h3>
+                    <ul class="characteristics-list">
+                        ${clusterInfo.characteristics.map(c => `<li>${c}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="result-card">
+                    <h3>💡 Recomendaciones</h3>
+                    <ul class="recommendations-list">
+                        ${clusterInfo.recommendations.map(r => `<li>${r}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="result-card treatment-card">
+                    <h3>💊 Posibles Tratamientos</h3>
+                    <ul class="treatments-list">
+                        ${clusterInfo.treatments.map(t => `<li>${t}</li>`).join('')}
+                    </ul>
+                    <div class="prognosis-box">
+                        <strong>Pronóstico:</strong> ${clusterInfo.prognosis}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-disclaimer">
+                <p>⚠️ <strong>Importante:</strong> Esta información es orientativa y se basa en análisis estadísticos. 
+                Cada caso es único. Por favor, consulte con su equipo médico para un diagnóstico y tratamiento personalizado.</p>
+            </div>
+            
+            <div class="result-actions">
+                <button class="btn btn-secondary" onclick="resetForm()">
+                    <span>←</span> Nuevo Análisis
+                </button>
+                <button class="btn btn-primary" onclick="window.print()">
+                    <span>🖨️</span> Imprimir Resultados
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Show results, hide form
+    formSection.style.display = 'none';
+    resultContainer.classList.add('visible');
+    
     // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }

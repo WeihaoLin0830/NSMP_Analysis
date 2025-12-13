@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSMP Analysis - Cáncer de Útero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+            background: linear-gradient(135deg, #fef9fa 0%, #f5d5de 50%, #e8d5f5 100%);
+        }
+        
+        .role-container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo-header {
+            margin-bottom: 2rem;
+        }
+        
+        .logo-header img {
+            height: 60px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo-header h1 {
+            color: #d4869a;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .role-cards-minimal {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            align-items: stretch;
+        }
+        
+        .role-card-minimal {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 10px 40px rgba(212, 134, 154, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 200px;
+        }
+        
+        .role-card-minimal:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: #d4869a;
+            box-shadow: 0 20px 60px rgba(212, 134, 154, 0.35);
+        }
+        
+        .role-emoji {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .role-card-minimal:hover .role-emoji {
+            transform: scale(1.1);
+        }
+        
+        .role-card-minimal h2 {
+            color: #4a4a4a;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        @media (max-width: 600px) {
+            .role-cards-minimal {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .role-card-minimal {
+                min-width: auto;
+                padding: 2rem;
+            }
+            
+            .role-emoji {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="role-container">
+        <div class="logo-header">
+            <img src="cinta_purpura.png" alt="NSMP Analysis">
+            <h1>NSMP Analysis</h1>
+        </div>
+
+        <div class="role-cards-minimal">
+            <div class="role-card-minimal" onclick="selectRole('patient')">
+                <div class="role-emoji">👩</div>
+                <h2>Paciente</h2>
+            </div>
+
+            <div class="role-card-minimal" onclick="selectRole('doctor')">
+                <div class="role-emoji">👩‍⚕️</div>
+                <h2>Profesional</h2>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectRole(role) {
+            localStorage.setItem('userRole', role);
+            if (role === 'doctor') {
+                window.location.href = '/dashboard';
+            } else {
+                window.location.href = '/calculator';
+            }
+        }
+    </script>
+</body>
+</html>

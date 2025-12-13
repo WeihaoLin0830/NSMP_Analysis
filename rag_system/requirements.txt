@@ -1,0 +1,22 @@
+# RAG System Dependencies
+# PDF Processing
+pdfplumber>=0.10.0
+
+# Embeddings and Vector Search
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+
+# Language Model
+transformers>=4.36.0
+torch>=2.1.0
+accelerate>=0.25.0
+
+# API
+fastapi>=0.108.0
+uvicorn>=0.25.0
+python-multipart>=0.0.6
+
+# Utilities
+numpy>=1.26.0
+tqdm>=4.66.0
+pydantic>=2.5.0

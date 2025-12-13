@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Médico - NSMP Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/chatbox.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="cinta_purpura.png" alt="Logo" class="nav-logo-img">
+                NSMP Analysis
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container dashboard-container">
+        <header class="dashboard-header">
+            <h1>Dashboard de Análisis NSMP</h1>
+            <p>Visualización de resultados del clustering de pacientes con perfil molecular no específico</p>
+        </header>
+
+        <!-- Cluster Overview -->
+        <section class="dashboard-section">
+            <h2 class="section-title">Resumen de Clusters</h2>
+            <div class="cluster-overview">
+                <div class="cluster-card cluster-1">
+                    <div class="cluster-number">1</div>
+                    <h3>Bajo Riesgo</h3>
+                    <p class="cluster-count">42 pacientes</p>
+                    <div class="cluster-stats">
+                        <span class="stat good">87% remisión</span>
+                    </div>
+                </div>
+                <div class="cluster-card cluster-2">
+                    <div class="cluster-number">2</div>
+                    <h3>Riesgo Moderado</h3>
+                    <p class="cluster-count">38 pacientes</p>
+                    <div class="cluster-stats">
+                        <span class="stat moderate">71% remisión</span>
+                    </div>
+                </div>
+                <div class="cluster-card cluster-3">
+                    <div class="cluster-number">3</div>
+                    <h3>Alto Riesgo</h3>
+                    <p class="cluster-count">28 pacientes</p>
+                    <div class="cluster-stats">
+                        <span class="stat warning">52% remisión</span>
+                    </div>
+                </div>
+                <div class="cluster-card cluster-4">
+                    <div class="cluster-number">4</div>
+                    <h3>Riesgo Elevado</h3>
+                    <p class="cluster-count">19 pacientes</p>
+                    <div class="cluster-stats">
+                        <span class="stat danger">34% remisión</span>
+                    </div>
+                </div>
+                <div class="cluster-card cluster-5">
+                    <div class="cluster-number">5</div>
+                    <h3>Casos Atípicos</h3>
+                    <p class="cluster-count">12 pacientes</p>
+                    <div class="cluster-stats">
+                        <span class="stat moderate">65% remisión</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+            <section class="dashboard-section chart-section">
+                <h2 class="section-title">Distribución por Cluster</h2>
+                <div class="chart-container">
+                    <canvas id="clusterDistribution"></canvas>
+                </div>
+            </section>
+
+            <section class="dashboard-section chart-section">
+                <h2 class="section-title">Tasa de Remisión por Cluster</h2>
+                <div class="chart-container">
+                    <canvas id="remissionRate"></canvas>
+                </div>
+            </section>
+        </div>
+
+        <!-- Cluster Profiles -->
+        <section class="dashboard-section">
+            <h2 class="section-title">Perfiles Característicos por Cluster</h2>
+            
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-cluster="1">Cluster 1</button>
+                <button class="tab-btn" data-cluster="2">Cluster 2</button>
+                <button class="tab-btn" data-cluster="3">Cluster 3</button>
+                <button class="tab-btn" data-cluster="4">Cluster 4</button>
+                <button class="tab-btn" data-cluster="5">Cluster 5</button>
+            </div>
+
+            <div class="profile-content" id="profileContent">
+                <!-- Content loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Risk Factors -->
+        <section class="dashboard-section">
+            <h2 class="section-title">Factores de Riesgo Identificados</h2>
+            <div class="risk-factors-grid">
+                <div class="risk-factor-card">
+                    <div class="risk-icon">📊</div>
+                    <h4>IMC Elevado</h4>
+                    <p>IMC > 30 asociado a clusters 3 y 4</p>
+                    <div class="risk-bar">
+                        <div class="risk-fill" style="width: 78%"></div>
+                    </div>
+                    <span class="risk-value">78% correlación</span>
+                </div>
+                <div class="risk-factor-card">
+                    <div class="risk-icon">🔄</div>
+                    <h4>Recidiva Múltiple</h4>
+                    <p>2+ recidivas predicen alto riesgo</p>
+                    <div class="risk-bar">
+                        <div class="risk-fill" style="width: 85%"></div>
+                    </div>
+                    <span class="risk-value">85% correlación</span>
+                </div>
+                <div class="risk-factor-card">
+                    <div class="risk-icon">🎂</div>
+                    <h4>Edad Avanzada</h4>
+                    <p>Edad > 65 años en clusters de riesgo</p>
+                    <div class="risk-bar">
+                        <div class="risk-fill" style="width: 62%"></div>
+                    </div>
+                    <span class="risk-value">62% correlación</span>
+                </div>
+                <div class="risk-factor-card">
+                    <div class="risk-icon">🫁</div>
+                    <h4>Recidiva Pulmonar</h4>
+                    <p>Asociada a peor pronóstico</p>
+                    <div class="risk-bar">
+                        <div class="risk-fill" style="width: 71%"></div>
+                    </div>
+                    <span class="risk-value">71% correlación</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Recommendations -->
+        <section class="dashboard-section">
+            <h2 class="section-title">Tratamientos Recomendados por Cluster</h2>
+            <div class="treatment-table-container">
+                <table class="treatment-table">
+                    <thead>
+                        <tr>
+                            <th>Cluster</th>
+                            <th>Tratamiento Principal</th>
+                            <th>Terapia Adyuvante</th>
+                            <th>Seguimiento</th>
+                            <th>Pronóstico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="cluster-badge c1">1</span></td>
+                            <td>Cirugía conservadora</td>
+                            <td>Braquiterapia opcional</td>
+                            <td>Cada 6 meses</td>
+                            <td><span class="prognosis good">Favorable</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="cluster-badge c2">2</span></td>
+                            <td>Histerectomía + linfadenectomía</td>
+                            <td>Radioterapia pélvica</td>
+                            <td>Cada 4 meses</td>
+                            <td><span class="prognosis moderate">Moderado</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="cluster-badge c3">3</span></td>
+                            <td>Cirugía radical + RT</td>
+                            <td>Quimioterapia adyuvante</td>
+                            <td>Cada 3 meses</td>
+                            <td><span class="prognosis warning">Reservado</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="cluster-badge c4">4</span></td>
+                            <td>QT neoadyuvante + Cirugía</td>
+                            <td>QT + RT combinada</td>
+                            <td>Mensual</td>
+                            <td><span class="prognosis danger">Desfavorable</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="cluster-badge c5">5</span></td>
+                            <td>Evaluación individualizada</td>
+                            <td>Según respuesta</td>
+                            <td>Personalizado</td>
+                            <td><span class="prognosis moderate">Variable</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Survival Analysis -->
+        <section class="dashboard-section">
+            <h2 class="section-title">Análisis de Supervivencia</h2>
+            <div class="chart-container-large">
+                <canvas id="survivalChart"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Desarrollado con 💜 para el proyecto BitsxMT25</p>
+        <p><small>Datos simulados para demostración - No usar para diagnóstico clínico</small></p>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/chatbox.js"></script>
+</body>
+</html>

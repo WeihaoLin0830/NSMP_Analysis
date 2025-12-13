@@ -59,8 +59,9 @@ body {
     font-weight: 600;
 }
 
-.nav-logo span {
-    font-size: 1.8rem;
+.nav-logo-img {
+    height: 28px;
+    width: auto;
 }
 
 .nav-links {
@@ -397,6 +398,190 @@ body {
     color: var(--primary-dark);
 }
 
+/* ===== Classification Results ===== */
+.cluster-result {
+    background: var(--background-card);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: left;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.cluster-badge-large {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.result-header-text h2 {
+    color: var(--primary-dark);
+    margin-bottom: 0.25rem;
+}
+
+.remission-rate {
+    color: var(--text-secondary);
+}
+
+.rate-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+.result-description {
+    background: var(--background-light);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-description p {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-card {
+    background: var(--background-light);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+}
+
+.result-card h3 {
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-light);
+}
+
+.profile-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.profile-item span {
+    color: var(--text-secondary);
+}
+
+.profile-item strong {
+    color: var(--primary-dark);
+}
+
+.characteristics-list,
+.recommendations-list,
+.treatments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.characteristics-list li,
+.recommendations-list li,
+.treatments-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.characteristics-list li:last-child,
+.recommendations-list li:last-child,
+.treatments-list li:last-child {
+    border-bottom: none;
+}
+
+.characteristics-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.recommendations-list li::before {
+    content: '💡';
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+.treatments-list li::before {
+    content: '✓';
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.treatment-card {
+    grid-column: 1 / -1;
+}
+
+.prognosis-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--background-card);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.prognosis-box strong {
+    color: var(--primary-dark);
+}
+
+.result-disclaimer {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: var(--border-radius);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.result-disclaimer p {
+    color: #856404;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.result-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* ===== Footer ===== */
 .footer {
     text-align: center;
@@ -409,6 +594,9 @@ body {
     color: var(--primary-dark);
     text-decoration: none;
 }
+
+/* Import dashboard styles */
+@import url('dashboard.css');
 
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
@@ -446,6 +634,19 @@ body {
     .checkbox-option {
         min-width: 100%;
     }
+    
+    .result-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .treatment-card {
+        grid-column: 1;
+    }
 }
 
 /* ===== Accessibility ===== */
@@ -460,4 +661,21 @@ body {
 *:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+    .navbar, .footer, .result-actions {
+        display: none;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .cluster-result {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
 }
