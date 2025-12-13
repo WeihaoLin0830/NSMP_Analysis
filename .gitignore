@@ -1,3 +1,7 @@
+#SYL: no penjar dataset orginial:
+#data/
+Dades/IQ_Cancer_Endometrio_merged_NMSP.xlsx
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
