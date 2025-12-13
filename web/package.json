@@ -1,0 +1,16 @@
+{
+  "name": "uterus-cancer-nsmp-analysis",
+  "version": "1.0.0",
+  "description": "Web application for NSMP uterus cancer patient profile analysis",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["cancer", "uterus", "NSMP", "healthcare"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,932 @@
+[
+  {
+    "id": 1,
+    "category": "general",
+    "question": "¿Qué es el cáncer de endometrio?",
+    "target_audience": "both"
+  },
+  {
+    "id": 2,
+    "category": "general",
+    "question": "¿Qué significa tener un perfil molecular NSMP?",
+    "target_audience": "both"
+  },
+  {
+    "id": 3,
+    "category": "general",
+    "question": "¿Cuáles son los diferentes tipos de cáncer de endometrio?",
+    "target_audience": "both"
+  },
+  {
+    "id": 4,
+    "category": "general",
+    "question": "¿Cómo se clasifica el cáncer de endometrio por estadios?",
+    "target_audience": "both"
+  },
+  {
+    "id": 5,
+    "category": "paciente",
+    "question": "¿Qué puedo esperar después de una histerectomía?",
+    "target_audience": "patient"
+  },
+  {
+    "id": 6,
+    "category": "paciente",
+    "question": "¿Cuáles son los efectos secundarios del tratamiento?",
+    "target_audience": "patient"
+  },
+  {
+    "id": 7,
+    "category": "paciente",
+    "question": "¿Con qué frecuencia necesito hacerme revisiones?",
+    "target_audience": "patient"
+  },
+  {
+    "id": 8,
+    "category": "paciente",
+    "question": "¿Qué síntomas debo vigilar después del tratamiento?",
+    "target_audience": "patient"
+  },
+  {
+    "id": 9,
+    "category": "paciente",
+    "question": "¿Cuál es mi pronóstico con perfil NSMP?",
+    "target_audience": "patient"
+  },
+  {
+    "id": 10,
+    "category": "médico",
+    "question": "¿Cuáles son las guías ESGO-ESTRO actuales para cáncer de endometrio?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 11,
+    "category": "médico",
+    "question": "¿Cuándo está indicada la linfadenectomía en pacientes NSMP?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 12,
+    "category": "médico",
+    "question": "¿Cuál es el rol de la radioterapia adyuvante en riesgo intermedio?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 13,
+    "category": "médico",
+    "question": "¿Cómo se define la invasión miometrial profunda?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 14,
+    "category": "médico",
+    "question": "¿Qué evidencia existe sobre quimioterapia en NSMP de alto riesgo?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 15,
+    "category": "médico",
+    "question": "¿Cuáles son los factores pronósticos en carcinoma endometrioide?",
+    "target_audience": "doctor"
+  },
+  {
+    "id": 16,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 17,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 18,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 19,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 20,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 21,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Gynecol?",
+    "target_audience": "both",
+    "related_topic": "Gynecol"
+  },
+  {
+    "id": 22,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 23,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 24,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 25,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 26,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 27,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Gynecology?",
+    "target_audience": "both",
+    "related_topic": "Gynecology"
+  },
+  {
+    "id": 28,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 29,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 30,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 31,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 32,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 33,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Nivel?",
+    "target_audience": "both",
+    "related_topic": "Nivel"
+  },
+  {
+    "id": 34,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 35,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 36,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 37,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 38,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 39,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para perfil molecular?",
+    "target_audience": "both",
+    "related_topic": "perfil molecular"
+  },
+  {
+    "id": 40,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 41,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 42,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 43,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 44,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 45,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para p53?",
+    "target_audience": "both",
+    "related_topic": "p53"
+  },
+  {
+    "id": 46,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 47,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 48,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 49,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 50,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 51,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Recommendations?",
+    "target_audience": "both",
+    "related_topic": "Recommendations"
+  },
+  {
+    "id": 52,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 53,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 54,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 55,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 56,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 57,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para carcinoma endometrial?",
+    "target_audience": "both",
+    "related_topic": "carcinoma endometrial"
+  },
+  {
+    "id": 58,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 59,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 60,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 61,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 62,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 63,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para riesgo intermedio?",
+    "target_audience": "both",
+    "related_topic": "riesgo intermedio"
+  },
+  {
+    "id": 64,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 65,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 66,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 67,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 68,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 69,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Early?",
+    "target_audience": "both",
+    "related_topic": "Early"
+  },
+  {
+    "id": 70,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 71,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 72,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 73,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 74,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 75,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para histerectomía?",
+    "target_audience": "both",
+    "related_topic": "histerectomía"
+  },
+  {
+    "id": 76,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 77,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 78,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 79,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 80,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 81,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para linfadenectomía?",
+    "target_audience": "both",
+    "related_topic": "linfadenectomía"
+  },
+  {
+    "id": 82,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 83,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 84,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 85,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 86,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 87,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para CA-125?",
+    "target_audience": "both",
+    "related_topic": "CA-125"
+  },
+  {
+    "id": 88,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 89,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 90,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 91,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 92,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 93,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para citorreducción?",
+    "target_audience": "both",
+    "related_topic": "citorreducción"
+  },
+  {
+    "id": 94,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 95,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 96,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 97,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 98,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 99,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Estadio?",
+    "target_audience": "both",
+    "related_topic": "Estadio"
+  },
+  {
+    "id": 100,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 101,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 102,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 103,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 104,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 105,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para NSMP?",
+    "target_audience": "both",
+    "related_topic": "NSMP"
+  },
+  {
+    "id": 106,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 107,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 108,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 109,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 110,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 111,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para recurrencia?",
+    "target_audience": "both",
+    "related_topic": "recurrencia"
+  },
+  {
+    "id": 112,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 113,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 114,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 115,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 116,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 117,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Obstetrics?",
+    "target_audience": "both",
+    "related_topic": "Obstetrics"
+  },
+  {
+    "id": 118,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 119,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 120,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 121,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 122,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 123,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Figure?",
+    "target_audience": "both",
+    "related_topic": "Figure"
+  },
+  {
+    "id": 124,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 125,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 126,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 127,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 128,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 129,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para Prof?",
+    "target_audience": "both",
+    "related_topic": "Prof"
+  },
+  {
+    "id": 130,
+    "category": "tratamiento",
+    "question": "¿Cuál es el tratamiento recomendado para células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  },
+  {
+    "id": 131,
+    "category": "diagnóstico",
+    "question": "¿Cómo se diagnostica células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  },
+  {
+    "id": 132,
+    "category": "pronóstico",
+    "question": "¿Cuál es el pronóstico para pacientes con células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  },
+  {
+    "id": 133,
+    "category": "riesgo",
+    "question": "¿Cuáles son los factores de riesgo para células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  },
+  {
+    "id": 134,
+    "category": "síntomas",
+    "question": "¿Cuáles son los síntomas de células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  },
+  {
+    "id": 135,
+    "category": "seguimiento",
+    "question": "¿Cuál es el seguimiento recomendado para células claras?",
+    "target_audience": "both",
+    "related_topic": "células claras"
+  }
+]

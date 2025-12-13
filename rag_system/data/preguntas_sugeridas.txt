@@ -1,0 +1,190 @@
+================================================================================
+PREGUNTAS SUGERIDAS - Sistema RAG Cáncer de Endometrio NSMP
+================================================================================
+
+Estas preguntas han sido generadas automáticamente basándose en el
+contenido de los documentos médicos indexados en el sistema.
+
+------------------------------------------------------------
+CATEGORÍA: GENERAL
+------------------------------------------------------------
+
+• ¿Qué es el cáncer de endometrio?
+• ¿Qué significa tener un perfil molecular NSMP?
+• ¿Cuáles son los diferentes tipos de cáncer de endometrio?
+• ¿Cómo se clasifica el cáncer de endometrio por estadios?
+
+------------------------------------------------------------
+CATEGORÍA: PACIENTE
+------------------------------------------------------------
+
+• ¿Qué puedo esperar después de una histerectomía? [Para pacientes]
+• ¿Cuáles son los efectos secundarios del tratamiento? [Para pacientes]
+• ¿Con qué frecuencia necesito hacerme revisiones? [Para pacientes]
+• ¿Qué síntomas debo vigilar después del tratamiento? [Para pacientes]
+• ¿Cuál es mi pronóstico con perfil NSMP? [Para pacientes]
+
+------------------------------------------------------------
+CATEGORÍA: MÉDICO
+------------------------------------------------------------
+
+• ¿Cuáles son las guías ESGO-ESTRO actuales para cáncer de endometrio? [Para profesionales]
+• ¿Cuándo está indicada la linfadenectomía en pacientes NSMP? [Para profesionales]
+• ¿Cuál es el rol de la radioterapia adyuvante en riesgo intermedio? [Para profesionales]
+• ¿Cómo se define la invasión miometrial profunda? [Para profesionales]
+• ¿Qué evidencia existe sobre quimioterapia en NSMP de alto riesgo? [Para profesionales]
+• ¿Cuáles son los factores pronósticos en carcinoma endometrioide? [Para profesionales]
+
+------------------------------------------------------------
+CATEGORÍA: TRATAMIENTO
+------------------------------------------------------------
+
+• ¿Cuál es el tratamiento recomendado para Gynecol?
+• ¿Cuál es el tratamiento recomendado para Gynecology?
+• ¿Cuál es el tratamiento recomendado para Nivel?
+• ¿Cuál es el tratamiento recomendado para perfil molecular?
+• ¿Cuál es el tratamiento recomendado para p53?
+• ¿Cuál es el tratamiento recomendado para Recommendations?
+• ¿Cuál es el tratamiento recomendado para carcinoma endometrial?
+• ¿Cuál es el tratamiento recomendado para riesgo intermedio?
+• ¿Cuál es el tratamiento recomendado para Early?
+• ¿Cuál es el tratamiento recomendado para histerectomía?
+• ¿Cuál es el tratamiento recomendado para linfadenectomía?
+• ¿Cuál es el tratamiento recomendado para CA-125?
+• ¿Cuál es el tratamiento recomendado para citorreducción?
+• ¿Cuál es el tratamiento recomendado para Estadio?
+• ¿Cuál es el tratamiento recomendado para NSMP?
+• ¿Cuál es el tratamiento recomendado para recurrencia?
+• ¿Cuál es el tratamiento recomendado para Obstetrics?
+• ¿Cuál es el tratamiento recomendado para Figure?
+• ¿Cuál es el tratamiento recomendado para Prof?
+• ¿Cuál es el tratamiento recomendado para células claras?
+
+------------------------------------------------------------
+CATEGORÍA: DIAGNÓSTICO
+------------------------------------------------------------
+
+• ¿Cómo se diagnostica Gynecol?
+• ¿Cómo se diagnostica Gynecology?
+• ¿Cómo se diagnostica Nivel?
+• ¿Cómo se diagnostica perfil molecular?
+• ¿Cómo se diagnostica p53?
+• ¿Cómo se diagnostica Recommendations?
+• ¿Cómo se diagnostica carcinoma endometrial?
+• ¿Cómo se diagnostica riesgo intermedio?
+• ¿Cómo se diagnostica Early?
+• ¿Cómo se diagnostica histerectomía?
+• ¿Cómo se diagnostica linfadenectomía?
+• ¿Cómo se diagnostica CA-125?
+• ¿Cómo se diagnostica citorreducción?
+• ¿Cómo se diagnostica Estadio?
+• ¿Cómo se diagnostica NSMP?
+• ¿Cómo se diagnostica recurrencia?
+• ¿Cómo se diagnostica Obstetrics?
+• ¿Cómo se diagnostica Figure?
+• ¿Cómo se diagnostica Prof?
+• ¿Cómo se diagnostica células claras?
+
+------------------------------------------------------------
+CATEGORÍA: PRONÓSTICO
+------------------------------------------------------------
+
+• ¿Cuál es el pronóstico para pacientes con Gynecol?
+• ¿Cuál es el pronóstico para pacientes con Gynecology?
+• ¿Cuál es el pronóstico para pacientes con Nivel?
+• ¿Cuál es el pronóstico para pacientes con perfil molecular?
+• ¿Cuál es el pronóstico para pacientes con p53?
+• ¿Cuál es el pronóstico para pacientes con Recommendations?
+• ¿Cuál es el pronóstico para pacientes con carcinoma endometrial?
+• ¿Cuál es el pronóstico para pacientes con riesgo intermedio?
+• ¿Cuál es el pronóstico para pacientes con Early?
+• ¿Cuál es el pronóstico para pacientes con histerectomía?
+• ¿Cuál es el pronóstico para pacientes con linfadenectomía?
+• ¿Cuál es el pronóstico para pacientes con CA-125?
+• ¿Cuál es el pronóstico para pacientes con citorreducción?
+• ¿Cuál es el pronóstico para pacientes con Estadio?
+• ¿Cuál es el pronóstico para pacientes con NSMP?
+• ¿Cuál es el pronóstico para pacientes con recurrencia?
+• ¿Cuál es el pronóstico para pacientes con Obstetrics?
+• ¿Cuál es el pronóstico para pacientes con Figure?
+• ¿Cuál es el pronóstico para pacientes con Prof?
+• ¿Cuál es el pronóstico para pacientes con células claras?
+
+------------------------------------------------------------
+CATEGORÍA: RIESGO
+------------------------------------------------------------
+
+• ¿Cuáles son los factores de riesgo para Gynecol?
+• ¿Cuáles son los factores de riesgo para Gynecology?
+• ¿Cuáles son los factores de riesgo para Nivel?
+• ¿Cuáles son los factores de riesgo para perfil molecular?
+• ¿Cuáles son los factores de riesgo para p53?
+• ¿Cuáles son los factores de riesgo para Recommendations?
+• ¿Cuáles son los factores de riesgo para carcinoma endometrial?
+• ¿Cuáles son los factores de riesgo para riesgo intermedio?
+• ¿Cuáles son los factores de riesgo para Early?
+• ¿Cuáles son los factores de riesgo para histerectomía?
+• ¿Cuáles son los factores de riesgo para linfadenectomía?
+• ¿Cuáles son los factores de riesgo para CA-125?
+• ¿Cuáles son los factores de riesgo para citorreducción?
+• ¿Cuáles son los factores de riesgo para Estadio?
+• ¿Cuáles son los factores de riesgo para NSMP?
+• ¿Cuáles son los factores de riesgo para recurrencia?
+• ¿Cuáles son los factores de riesgo para Obstetrics?
+• ¿Cuáles son los factores de riesgo para Figure?
+• ¿Cuáles son los factores de riesgo para Prof?
+• ¿Cuáles son los factores de riesgo para células claras?
+
+------------------------------------------------------------
+CATEGORÍA: SÍNTOMAS
+------------------------------------------------------------
+
+• ¿Cuáles son los síntomas de Gynecol?
+• ¿Cuáles son los síntomas de Gynecology?
+• ¿Cuáles son los síntomas de Nivel?
+• ¿Cuáles son los síntomas de perfil molecular?
+• ¿Cuáles son los síntomas de p53?
+• ¿Cuáles son los síntomas de Recommendations?
+• ¿Cuáles son los síntomas de carcinoma endometrial?
+• ¿Cuáles son los síntomas de riesgo intermedio?
+• ¿Cuáles son los síntomas de Early?
+• ¿Cuáles son los síntomas de histerectomía?
+• ¿Cuáles son los síntomas de linfadenectomía?
+• ¿Cuáles son los síntomas de CA-125?
+• ¿Cuáles son los síntomas de citorreducción?
+• ¿Cuáles son los síntomas de Estadio?
+• ¿Cuáles son los síntomas de NSMP?
+• ¿Cuáles son los síntomas de recurrencia?
+• ¿Cuáles son los síntomas de Obstetrics?
+• ¿Cuáles son los síntomas de Figure?
+• ¿Cuáles son los síntomas de Prof?
+• ¿Cuáles son los síntomas de células claras?
+
+------------------------------------------------------------
+CATEGORÍA: SEGUIMIENTO
+------------------------------------------------------------
+
+• ¿Cuál es el seguimiento recomendado para Gynecol?
+• ¿Cuál es el seguimiento recomendado para Gynecology?
+• ¿Cuál es el seguimiento recomendado para Nivel?
+• ¿Cuál es el seguimiento recomendado para perfil molecular?
+• ¿Cuál es el seguimiento recomendado para p53?
+• ¿Cuál es el seguimiento recomendado para Recommendations?
+• ¿Cuál es el seguimiento recomendado para carcinoma endometrial?
+• ¿Cuál es el seguimiento recomendado para riesgo intermedio?
+• ¿Cuál es el seguimiento recomendado para Early?
+• ¿Cuál es el seguimiento recomendado para histerectomía?
+• ¿Cuál es el seguimiento recomendado para linfadenectomía?
+• ¿Cuál es el seguimiento recomendado para CA-125?
+• ¿Cuál es el seguimiento recomendado para citorreducción?
+• ¿Cuál es el seguimiento recomendado para Estadio?
+• ¿Cuál es el seguimiento recomendado para NSMP?
+• ¿Cuál es el seguimiento recomendado para recurrencia?
+• ¿Cuál es el seguimiento recomendado para Obstetrics?
+• ¿Cuál es el seguimiento recomendado para Figure?
+• ¿Cuál es el seguimiento recomendado para Prof?
+• ¿Cuál es el seguimiento recomendado para células claras?
+
+================================================================================
+Total de preguntas generadas: 135
+================================================================================
