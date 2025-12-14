@@ -350,6 +350,35 @@ def _to_python_bool(val) -> bool:
         return False
 
 
+def _serialize_value(val):
+    """Serialize a value to JSON-compatible type"""
+    if val is None:
+        return None
+    # Handle numpy booleans (np.bool8 removed in newer numpy versions)
+    if isinstance(val, (np.bool_,)):
+        return bool(val)
+    if isinstance(val, (bool,)):
+        return bool(val)
+    if isinstance(val, (np.integer,)):
+        return int(val)
+    if isinstance(val, (np.floating,)):
+        if np.isnan(val) or np.isinf(val):
+            return None
+        return float(val)
+    if isinstance(val, (float,)):
+        if np.isnan(val) or np.isinf(val):
+            return None
+        return float(val)
+    if pd.isna(val):
+        return None
+    return val
+
+
+def _serialize_patient_data(patient_dict: dict) -> dict:
+    """Serialize patient data to JSON-compatible types"""
+    return {k: _serialize_value(v) for k, v in patient_dict.items()}
+
+
 def predict_one(patient_dict: dict) -> dict:
     """Predict for a single patient"""
     df_one = pd.DataFrame([patient_dict])
@@ -484,17 +513,30 @@ async def get_patient(patient_index: int):
         raise HTTPException(status_code=404, detail="No reference data loaded")
     
     try:
-        # Find patient
+        # Find patient by index
         if 'index' in df_reference.columns:
-            patient_row = df_reference[df_reference['index'] == patient_index]
+            mask = df_reference['index'] == patient_index
+            if not mask.any():
+                # Try as positional index
+                if patient_index >= 0 and patient_index < len(df_reference):
+                    patient_row = df_reference.iloc[[patient_index]]
+                else:
+                    raise HTTPException(status_code=404, detail=f"Patient {patient_index} not found")
+            else:
+                patient_row = df_reference[mask]
         else:
-            patient_row = df_reference.iloc[[patient_index]] if patient_index < len(df_reference) else pd.DataFrame()
+            if patient_index >= 0 and patient_index < len(df_reference):
+                patient_row = df_reference.iloc[[patient_index]]
+            else:
+                raise HTTPException(status_code=404, detail=f"Patient {patient_index} not found")
         
         if patient_row.empty:
             raise HTTPException(status_code=404, detail=f"Patient {patient_index} not found")
         
+        # Get patient data and serialize
         patient_data = patient_row.iloc[0].to_dict()
         patient_data['index'] = patient_index
+        patient_data = _serialize_patient_data(patient_data)
         
         # Get prediction
         prediction = predict_one(patient_data)
@@ -508,6 +550,8 @@ async def get_patient(patient_index: int):
         raise
     except Exception as e:
         print(f"Error getting patient: {e}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
 

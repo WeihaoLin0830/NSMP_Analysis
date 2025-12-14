@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Búsqueda de Pacientes - NSMP Analysis</title>
+    <title>Búsqueda - NSMP Analysis</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/chatbox.css">
     <style>
+        /* Search Page Styles */
         .search-container {
-            max-width: 600px;
+            max-width: 900px;
             margin: 2rem auto;
         }
         
@@ -39,6 +40,8 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             overflow: hidden;
+            max-height: 400px;
+            overflow-y: auto;
         }
         
         .patient-item {
@@ -53,6 +56,7 @@
         
         .patient-item:hover {
             background: #fef9fa;
+            transform: translateX(5px);
         }
         
         .patient-item:last-child {
@@ -124,6 +128,276 @@
             color: var(--text-secondary);
             margin-top: 0.25rem;
         }
+
+        /* Professional Result Section */
+        .profile-result {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(212, 134, 154, 0.15);
+            overflow: hidden;
+            animation: slideUp 0.4s ease;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #d4869a 0%, #b8627a 100%);
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .profile-header h2 {
+            margin: 0 0 0.5rem;
+            font-size: 1.8rem;
+            color: #ffffff;
+        }
+
+        .profile-header .patient-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: #ffffff;
+        }
+
+        .cluster-ribbon {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .ribbon-item {
+            background: rgba(255,255,255,0.15);
+            padding: 0.75rem 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .ribbon-item .label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .ribbon-item .value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 0.25rem;
+            color: #ffffff;
+        }
+
+        .profile-body {
+            padding: 2rem;
+        }
+
+        /* Survival Analysis Card */
+        .survival-analysis {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .survival-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .survival-card {
+            background: linear-gradient(135deg, #fef9fa 0%, #fff 100%);
+            border: 1px solid #f5e6ea;
+            border-radius: 15px;
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .survival-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 134, 154, 0.15);
+        }
+
+        .survival-card h4 {
+            font-size: 0.85rem;
+            color: #888;
+            margin: 0 0 0.5rem;
+            font-weight: 500;
+        }
+
+        .survival-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .survival-card .value.high { color: #27ae60; }
+        .survival-card .value.medium { color: #f39c12; }
+        .survival-card .value.low { color: #e74c3c; }
+
+        .survival-card .sublabel {
+            font-size: 0.75rem;
+            color: #999;
+            margin-top: 0.25rem;
+        }
+
+        /* Risk Indicator */
+        .risk-indicator {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 2px solid #e8e8e8;
+        }
+
+        .risk-indicator.bajo {
+            border-color: #27ae60;
+            background: linear-gradient(135deg, #d4edda 0%, #fff 100%);
+        }
+
+        .risk-indicator.medio {
+            border-color: #f39c12;
+            background: linear-gradient(135deg, #fff3cd 0%, #fff 100%);
+        }
+
+        .risk-indicator.alto {
+            border-color: #e74c3c;
+            background: linear-gradient(135deg, #f8d7da 0%, #fff 100%);
+        }
+
+        .risk-indicator .risk-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .risk-indicator .risk-label {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .risk-indicator.bajo .risk-label { color: #155724; }
+        .risk-indicator.medio .risk-label { color: #856404; }
+        .risk-indicator.alto .risk-label { color: #721c24; }
+
+        .risk-indicator .risk-value {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.25rem;
+        }
+
+        /* Clinical Data Grid */
+        .clinical-data {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .data-card {
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .data-card-header {
+            background: linear-gradient(135deg, #fef9fa 0%, #f8f4f5 100%);
+            padding: 1rem 1.25rem;
+            font-weight: 600;
+            color: var(--primary);
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .data-card-body {
+            padding: 1rem 1.25rem;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #f8f8f8;
+        }
+
+        .data-row:last-child {
+            border-bottom: none;
+        }
+
+        .data-row .label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .data-row .value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .data-row .value.missing {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Warnings Section */
+        .warnings-section {
+            background: #fff9e6;
+            border: 1px solid #ffd700;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .warnings-section h4 {
+            color: #856404;
+            margin: 0 0 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .warnings-section ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        .warnings-section li {
+            color: #856404;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Action Buttons */
+        .profile-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        @media print {
+            .navbar, .profile-actions, .chat-toggle, .chat-container, .footer {
+                display: none !important;
+            }
+            .profile-result {
+                box-shadow: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,25 +410,27 @@
             </a>
             <ul class="nav-links">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/calculator">Añadir</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main class="container">
-        <section class="form-section">
+        <!-- Search Section -->
+        <section class="form-section" id="searchSection">
             <div class="form-header">
-                <h1>👩‍⚕️ Búsqueda de Pacientes</h1>
+                <h1>🔍 Búsqueda de Pacientes</h1>
                 <p>Busque pacientes por su índice para ver su perfil de riesgo y análisis de supervivencia</p>
             </div>
 
             <div class="search-container">
                 <div class="search-box">
                     <input 
-                        type="text" 
+                        type="number" 
                         id="searchInput" 
-                        placeholder="Buscar por índice de paciente (ej: 0, 1, 2...)"
+                        placeholder="Introduzca el índice del paciente (0, 1, 2...)"
+                        min="0"
                         autofocus
                     >
                     <button class="btn btn-primary" onclick="searchPatient()">
@@ -170,17 +446,22 @@
                     </div>
                     <div class="stat-card">
                         <div class="stat-value" id="cluster1Count">-</div>
-                        <div class="stat-label">Cluster 1</div>
+                        <div class="stat-label">Cluster 1 (Bajo Riesgo)</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-value" id="cluster2Count">-</div>
-                        <div class="stat-label">Cluster 2</div>
+                        <div class="stat-label">Cluster 2 (Seguimiento)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="highRiskCount">-</div>
+                        <div class="stat-label">Riesgo Alto</div>
                     </div>
                 </div>
 
                 <!-- Patient List -->
                 <div class="patient-list" id="patientList">
                     <div class="no-results" id="loadingMessage">
+                        <div class="loading-spinner"></div>
                         Cargando lista de pacientes...
                     </div>
                 </div>
@@ -196,20 +477,25 @@
     <!-- Footer -->
     <footer class="footer">
         <p>Desarrollado con 💜 para el proyecto BitsxMT25</p>
-        <p><small>Panel de profesionales médicos - Datos confidenciales</small></p>
+        <p><small>Sistema de análisis de riesgo para cáncer de endometrio NSMP</small></p>
     </footer>
 
     <script>
         // Configuration
         const CLUSTER_INFO = {
-            1: { name: "Cluster 1 - Bajo Riesgo", color: "#27ae60", icon: "✅" },
-            2: { name: "Cluster 2 - Seguimiento Requerido", color: "#f39c12", icon: "⚠️" }
+            1: { name: "Cluster 1", description: "Bajo Riesgo", color: "#27ae60", icon: "✅" },
+            2: { name: "Cluster 2", description: "Seguimiento Requerido", color: "#f39c12", icon: "⚠️" }
         };
         
         const RISK_GROUP_INFO = {
             bajo: { name: "Riesgo Bajo", color: "#27ae60", icon: "🟢" },
             medio: { name: "Riesgo Medio", color: "#f39c12", icon: "🟡" },
             alto: { name: "Riesgo Alto", color: "#e74c3c", icon: "🔴" }
+        };
+
+        const SUBCLUSTER_INFO = {
+            11: { name: "Subcluster 11", description: "Perfil específico tipo A" },
+            12: { name: "Subcluster 12", description: "Perfil específico tipo B" }
         };
 
         let allPatients = [];
@@ -240,7 +526,7 @@
                 console.error('Error:', error);
                 document.getElementById('patientList').innerHTML = `
                     <div class="no-results">
-                        Error al cargar pacientes: ${error.message}
+                        ❌ Error al cargar pacientes: ${error.message}
                     </div>
                 `;
             }
@@ -250,6 +536,7 @@
             document.getElementById('totalPatients').textContent = patients.length;
             document.getElementById('cluster1Count').textContent = patients.filter(p => p.cluster_pred === 1).length;
             document.getElementById('cluster2Count').textContent = patients.filter(p => p.cluster_pred === 2).length;
+            document.getElementById('highRiskCount').textContent = patients.filter(p => p.risk_group === 'alto').length;
         }
 
         function displayPatientList(patients) {
@@ -260,26 +547,31 @@
                 return;
             }
 
-            container.innerHTML = patients.slice(0, 20).map(patient => `
-                <div class="patient-item" onclick="viewPatient(${patient.index})">
-                    <div class="patient-info">
-                        <span class="patient-id">Paciente #${patient.index}</span>
-                        <span class="patient-details">
-                            Edad: ${patient.edad_en_cirugia || 'N/A'} | 
-                            FIGO: ${patient.FIGO2023 || 'N/A'} |
-                            Riesgo: ${patient.risk_group || 'N/A'}
+            const displayPatients = patients.slice(0, 30);
+            
+            container.innerHTML = displayPatients.map(patient => {
+                const riskInfo = RISK_GROUP_INFO[patient.risk_group] || RISK_GROUP_INFO.medio;
+                return `
+                    <div class="patient-item" onclick="viewPatient(${patient.index})">
+                        <div class="patient-info">
+                            <span class="patient-id">Paciente #${patient.index}</span>
+                            <span class="patient-details">
+                                Edad: ${patient.edad_en_cirugia || 'N/A'} años | 
+                                FIGO: ${patient.FIGO2023 || 'N/A'} |
+                                ${riskInfo.icon} ${riskInfo.name}
+                            </span>
+                        </div>
+                        <span class="patient-cluster cluster-${patient.cluster_pred}">
+                            ${CLUSTER_INFO[patient.cluster_pred]?.description || 'Cluster ' + patient.cluster_pred}
                         </span>
                     </div>
-                    <span class="patient-cluster cluster-${patient.cluster_pred}">
-                        ${CLUSTER_INFO[patient.cluster_pred]?.name || 'Cluster ' + patient.cluster_pred}
-                    </span>
-                </div>
-            `).join('');
+                `;
+            }).join('');
 
-            if (patients.length > 20) {
+            if (patients.length > 30) {
                 container.innerHTML += `
-                    <div class="patient-item" style="justify-content: center; color: var(--text-secondary);">
-                        Mostrando 20 de ${patients.length} pacientes. Use la búsqueda para encontrar más.
+                    <div class="patient-item" style="justify-content: center; color: var(--text-secondary); cursor: default;">
+                        Mostrando 30 de ${patients.length} pacientes. Use el buscador para encontrar un paciente específico.
                     </div>
                 `;
             }
@@ -293,117 +585,272 @@
                 return;
             }
 
-            // If it's a number, search by exact index
             const indexNum = parseInt(query);
-            if (!isNaN(indexNum)) {
+            if (!isNaN(indexNum) && indexNum >= 0) {
                 viewPatient(indexNum);
             } else {
-                // Filter by partial match
-                const filtered = allPatients.filter(p => 
-                    String(p.index).includes(query) ||
-                    String(p.edad_en_cirugia).includes(query)
-                );
-                displayPatientList(filtered);
+                alert('Por favor, introduzca un número de índice válido (0, 1, 2, ...)');
             }
         }
 
         async function viewPatient(index) {
             try {
+                document.getElementById('searchSection').style.opacity = '0.5';
+                
                 const response = await fetch(`/api/patients/${index}`);
                 const data = await response.json();
                 
+                document.getElementById('searchSection').style.opacity = '1';
+                
                 if (data.success) {
-                    displayPatientDetails(data.patient, data.prediction);
+                    displayPatientProfile(data.patient, data.prediction);
                 } else {
                     throw new Error(data.error || 'Paciente no encontrado');
                 }
             } catch (error) {
+                document.getElementById('searchSection').style.opacity = '1';
                 console.error('Error:', error);
                 alert('Error: ' + error.message);
             }
         }
 
-        function displayPatientDetails(patient, prediction) {
+        function formatValue(value, suffix = '') {
+            if (value === null || value === undefined || value === 'nan' || value === 'NaN') {
+                return '<span class="missing">No disponible</span>';
+            }
+            if (typeof value === 'number') {
+                return value.toFixed(2) + suffix;
+            }
+            return value + suffix;
+        }
+
+        function getSurvivalClass(value) {
+            if (value === null || value === undefined) return '';
+            if (value >= 0.8) return 'high';
+            if (value >= 0.5) return 'medium';
+            return 'low';
+        }
+
+        function displayPatientProfile(patient, prediction) {
             const resultSection = document.getElementById('resultSection');
             const clusterInfo = CLUSTER_INFO[prediction.cluster_pred] || CLUSTER_INFO[1];
             const riskInfo = RISK_GROUP_INFO[prediction.risk_group] || RISK_GROUP_INFO.medio;
+            const riskGroup = prediction.risk_group || 'medio';
 
             let html = `
-                <div class="result-header">
-                    <div class="result-icon">${clusterInfo.icon}</div>
-                    <h2>Paciente #${patient.index}</h2>
-                    <div class="cluster-badge cluster-${prediction.cluster_pred}" style="background: ${clusterInfo.color}; color: white;">
-                        ${clusterInfo.name}
-                    </div>
-                </div>
-
-                <!-- Patient Data -->
-                <h3 style="margin: 2rem 0 1rem; color: var(--primary);">📋 Datos del Paciente</h3>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>📊 Variables Numéricas</h3>
-                        <ul>
-                            <li>Edad en cirugía: ${patient.edad_en_cirugia || 'N/A'}</li>
-                            <li>IMC: ${patient.imc || 'N/A'}</li>
-                            <li>CA125: ${patient.valor_de_ca125 || 'N/A'}</li>
-                            <li>Tamaño tumoral: ${patient.tamano_tumoral || 'N/A'} cm</li>
-                            <li>Rec. Estrógeno: ${patient.recep_est_porcent || 'N/A'}%</li>
-                            <li>Rec. Progesterona: ${patient.rece_de_Ppor || 'N/A'}%</li>
-                        </ul>
-                    </div>
-                    <div class="info-card">
-                        <h3>🔬 Variables Clínicas</h3>
-                        <ul>
-                            <li>ASA: ${patient.asa || 'N/A'}</li>
-                            <li>Histología: ${patient.histo_defin || 'N/A'}</li>
-                            <li>Grado: ${patient.grado_histologi || 'N/A'}</li>
-                            <li>FIGO 2023: ${patient.FIGO2023 || 'N/A'}</li>
-                            <li>Afect. Linfovascular: ${patient.afectacion_linf || 'N/A'}</li>
-                            <li>Metástasis: ${patient.metasta_distan || 'N/A'}</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Survival -->
-                <h3 style="margin: 2rem 0 1rem; color: var(--primary);">📊 Análisis de Supervivencia</h3>
-                <div class="survival-grid">
-                    <div class="survival-card">
-                        <h4>1 Año</h4>
-                        <div class="value">${(prediction.S_1y * 100).toFixed(1)}%</div>
-                    </div>
-                    <div class="survival-card">
-                        <h4>3 Años</h4>
-                        <div class="value">${(prediction.S_3y * 100).toFixed(1)}%</div>
-                    </div>
-                    <div class="survival-card">
-                        <h4>5 Años</h4>
-                        <div class="value">${(prediction.S_5y * 100).toFixed(1)}%</div>
-                    </div>
-                    <div class="survival-card">
-                        <h4>Grupo de Riesgo</h4>
-                        <div class="value" style="font-size: 1.3rem; color: ${riskInfo.color};">
-                            ${riskInfo.icon} ${riskInfo.name}
+                <div class="profile-result">
+                    <!-- Header -->
+                    <div class="profile-header">
+                        <h2>${clusterInfo.icon} Perfil del Paciente #${patient.index}</h2>
+                        <div class="patient-badge">Base de datos NSMP</div>
+                        
+                        <div class="cluster-ribbon">
+                            <div class="ribbon-item">
+                                <div class="label">Cluster</div>
+                                <div class="value">${prediction.cluster_pred}</div>
+                            </div>
+                            ${prediction.subcluster_pred ? `
+                            <div class="ribbon-item">
+                                <div class="label">Subcluster</div>
+                                <div class="value">${prediction.subcluster_pred}</div>
+                            </div>
+                            ` : ''}
+                            <div class="ribbon-item">
+                                <div class="label">Grupo de Riesgo</div>
+                                <div class="value">${riskInfo.icon} ${riskInfo.name.replace('Riesgo ', '')}</div>
+                            </div>
+                            <div class="ribbon-item">
+                                <div class="label">Confianza Cluster</div>
+                                <div class="value">${prediction.p_cluster1 !== null ? (prediction.p_cluster1 * 100).toFixed(1) + '%' : 'N/A'}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="result-actions">
-                    <button class="btn btn-secondary" onclick="backToList()">
-                        ← Volver a la lista
-                    </button>
-                    <button class="btn btn-primary" onclick="window.print()">
-                        🖨️ Imprimir
-                    </button>
+                    <!-- Body -->
+                    <div class="profile-body">
+                        <!-- Survival Analysis -->
+                        <div class="survival-analysis">
+                            <h3 class="section-title">📊 Análisis de Supervivencia</h3>
+                            <div class="survival-grid">
+                                <div class="survival-card">
+                                    <h4>Supervivencia 1 Año</h4>
+                                    <div class="value ${getSurvivalClass(prediction.S_1y)}">${(prediction.S_1y * 100).toFixed(1)}%</div>
+                                    <div class="sublabel">S(365 días)</div>
+                                </div>
+                                <div class="survival-card">
+                                    <h4>Supervivencia 3 Años</h4>
+                                    <div class="value ${getSurvivalClass(prediction.S_3y)}">${(prediction.S_3y * 100).toFixed(1)}%</div>
+                                    <div class="sublabel">S(1095 días)</div>
+                                </div>
+                                <div class="survival-card">
+                                    <h4>Supervivencia 5 Años</h4>
+                                    <div class="value ${getSurvivalClass(prediction.S_5y)}">${(prediction.S_5y * 100).toFixed(1)}%</div>
+                                    <div class="sublabel">S(1825 días)</div>
+                                </div>
+                                <div class="risk-indicator ${riskGroup}">
+                                    <div class="risk-icon">${riskInfo.icon}</div>
+                                    <div class="risk-label">${riskInfo.name}</div>
+                                    <div class="risk-value">Riesgo a 3 años: ${(prediction.risk_3y * 100).toFixed(1)}%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Clinical Data -->
+                        <div class="clinical-data">
+                            <div class="data-card">
+                                <div class="data-card-header">📋 Variables Numéricas</div>
+                                <div class="data-card-body">
+                                    <div class="data-row">
+                                        <span class="label">Edad en cirugía</span>
+                                        <span class="value">${formatValue(patient.edad_en_cirugia, ' años')}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">IMC</span>
+                                        <span class="value">${formatValue(patient.imc, ' kg/m²')}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">CA-125</span>
+                                        <span class="value">${formatValue(patient.valor_de_ca125, ' U/mL')}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Tamaño tumoral</span>
+                                        <span class="value">${formatValue(patient.tamano_tumoral, ' cm')}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Receptor Estrógeno</span>
+                                        <span class="value">${formatValue(patient.recep_est_porcent ? patient.recep_est_porcent * 100 : null, '%')}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Receptor Progesterona</span>
+                                        <span class="value">${formatValue(patient.rece_de_Ppor ? patient.rece_de_Ppor * 100 : null, '%')}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="data-card">
+                                <div class="data-card-header">🔬 Variables Clínicas</div>
+                                <div class="data-card-body">
+                                    <div class="data-row">
+                                        <span class="label">ASA</span>
+                                        <span class="value">${formatValue(patient.asa)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Histología Definitiva</span>
+                                        <span class="value">${formatValue(patient.histo_defin)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Grado Histológico</span>
+                                        <span class="value">${formatValue(patient.grado_histologi)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">FIGO 2023</span>
+                                        <span class="value">${formatValue(patient.FIGO2023)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Afectación Linfovascular</span>
+                                        <span class="value">${formatValue(patient.afectacion_linf)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Metástasis Distantes</span>
+                                        <span class="value">${formatValue(patient.metasta_distan)}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="data-card">
+                                <div class="data-card-header">🩺 Análisis Ganglionar</div>
+                                <div class="data-card-body">
+                                    <div class="data-row">
+                                        <span class="label">AP Centinela Pélvico</span>
+                                        <span class="value">${formatValue(patient.AP_centinela_pelvico)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">AP Ganglios Pélvicos</span>
+                                        <span class="value">${formatValue(patient.AP_ganPelv)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">AP Ganglios Paraaórticos</span>
+                                        <span class="value">${formatValue(patient.AP_glanPaor)}</span>
+                                    </div>
+                                    <div class="data-row">
+                                        <span class="label">Beta-Catenina</span>
+                                        <span class="value">${formatValue(patient.beta_cateninap)}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subcluster Info if available -->
+                        ${prediction.subcluster_pred ? `
+                        <div class="data-card" style="margin-top: 1.5rem;">
+                            <div class="data-card-header">🧬 Información de Subcluster</div>
+                            <div class="data-card-body">
+                                <div class="data-row">
+                                    <span class="label">Subcluster Asignado</span>
+                                    <span class="value">${prediction.subcluster_pred}</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="label">Probabilidad Subcluster 11</span>
+                                    <span class="value">${prediction.p_subcluster11 !== null ? (prediction.p_subcluster11 * 100).toFixed(1) + '%' : 'N/A'}</span>
+                                </div>
+                                <div class="data-row">
+                                    <span class="label">Umbral Utilizado</span>
+                                    <span class="value">${prediction.threshold_used !== null ? (prediction.threshold_used * 100).toFixed(0) + '%' : 'N/A'}</span>
+                                </div>
+                            </div>
+                        </div>
+                        ` : ''}
+            `;
+
+            // Warnings if any
+            const warnings = prediction.warnings || {};
+            const activeWarnings = Object.entries(warnings).filter(([k, v]) => v);
+            
+            if (activeWarnings.length > 0) {
+                html += `
+                    <div class="warnings-section">
+                        <h4>⚠️ Advertencias</h4>
+                        <ul>
+                            ${activeWarnings.map(([k, v]) => `<li>${getWarningMessage(k)}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            }
+
+            html += `
+                        <!-- Actions -->
+                        <div class="profile-actions">
+                            <button class="btn btn-secondary" onclick="backToSearch()">
+                                ← Volver a la búsqueda
+                            </button>
+                            <button class="btn btn-primary" onclick="window.print()">
+                                🖨️ Imprimir Informe
+                            </button>
+                        </div>
+                    </div>
                 </div>
             `;
 
             resultSection.innerHTML = html;
             resultSection.style.display = 'block';
+            document.getElementById('searchSection').style.display = 'none';
             resultSection.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function backToList() {
+        function getWarningMessage(key) {
+            const messages = {
+                'many_missing_flag': 'Se detectaron varios valores faltantes en los datos del paciente.',
+                'low_confidence_cluster': 'La asignación de cluster tiene baja confianza (cercana al umbral).',
+                'low_confidence_flag': 'La asignación de subcluster tiene baja confianza.',
+                'unknown_category_flag': 'Se detectaron categorías no reconocidas en los datos.'
+            };
+            return messages[key] || key;
+        }
+
+        function backToSearch() {
             document.getElementById('resultSection').style.display = 'none';
+            document.getElementById('searchSection').style.display = 'block';
+            document.getElementById('searchInput').value = '';
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
