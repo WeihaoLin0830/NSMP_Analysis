@@ -39,7 +39,7 @@ timeout /t 3 /nobreak >nul
 
 echo.
 echo [3/4] Iniciando API Clustering en puerto 8001...
-start "Clustering API" cmd /c "python clustering_api.py"
+start "Clustering API" cmd /c "py -3.13 clustering_api.py"
 
 REM Wait for clustering API to start
 timeout /t 3 /nobreak >nul

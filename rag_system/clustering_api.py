@@ -337,6 +337,19 @@ def assign_cluster_and_subcluster(X_aligned: pd.DataFrame, threshold: float = 0.
     return out
 
 
+def _to_python_bool(val) -> bool:
+    """Convert numpy.bool or any value to Python native bool"""
+    if val is None:
+        return False
+    if isinstance(val, (bool, int)):
+        return bool(val)
+    # Handle numpy bool types
+    try:
+        return bool(val)
+    except (TypeError, ValueError):
+        return False
+
+
 def predict_one(patient_dict: dict) -> dict:
     """Predict for a single patient"""
     df_one = pd.DataFrame([patient_dict])
@@ -345,7 +358,7 @@ def predict_one(patient_dict: dict) -> dict:
     # Compute warnings
     miss_cols = [c for c in EXPECTED_COLUMNS if c.endswith('_miss')]
     miss_sum = X_one[miss_cols].sum(axis=1).iloc[0] if miss_cols else 0
-    many_missing_flag = miss_sum >= 3
+    many_missing_flag = _to_python_bool(miss_sum >= 3)
     
     # Get predictions
     profile = assign_cluster_and_subcluster(X_one).iloc[0].to_dict()
@@ -355,7 +368,7 @@ def predict_one(patient_dict: dict) -> dict:
     return {
         'cluster_pred': int(profile['cluster_pred']),
         'p_cluster1': None if pd.isna(profile.get('p_cluster1')) else float(profile['p_cluster1']),
-        'low_confidence_cluster': bool(profile.get('low_confidence_cluster', False)),
+        'low_confidence_cluster': _to_python_bool(profile.get('low_confidence_cluster', False)),
         'subcluster_pred': int(profile['subcluster_pred']) if profile['subcluster_pred'] is not None else None,
         'p_subcluster11': None if pd.isna(profile['p_subcluster11']) else float(profile['p_subcluster11']),
         'threshold_used': None if pd.isna(profile['threshold_used']) else float(profile['threshold_used']),
@@ -366,8 +379,8 @@ def predict_one(patient_dict: dict) -> dict:
         'risk_group': risk_group,
         'warnings': {
             'many_missing_flag': many_missing_flag,
-            'low_confidence_cluster': bool(profile.get('low_confidence_cluster', False)),
-            'low_confidence_flag': bool(profile.get('low_confidence_flag', False)),
+            'low_confidence_cluster': _to_python_bool(profile.get('low_confidence_cluster', False)),
+            'low_confidence_flag': _to_python_bool(profile.get('low_confidence_flag', False)),
             'unknown_category_flag': False,
         },
     }
@@ -423,11 +436,13 @@ async def health():
 async def predict(patient: PatientData):
     """Predict cluster and survival for a patient"""
     try:
-        patient_dict = patient.dict()
+        patient_dict = patient.model_dump()
         prediction = predict_one(patient_dict)
         return PredictionResponse(success=True, prediction=prediction)
     except Exception as e:
         print(f"Prediction error: {e}")
+        import traceback
+        traceback.print_exc()
         return PredictionResponse(success=False, error=str(e))
 
 
