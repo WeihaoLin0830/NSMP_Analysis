@@ -1,0 +1,15 @@
+{
+  "rsf_cindex_cv_mean": 0.8112035293131188,
+  "rsf_cindex_cv_std": 0.03684365791010643,
+  "cox_cindex_cv_mean": 0.7330656715580823,
+  "cox_cindex_cv_std": 0.05742694083963921,
+  "cluster_sizes": {
+    "1": 52,
+    "2": 95
+  },
+  "event_rate_global": 0.25170068027210885,
+  "event_rate_by_cluster": {
+    "1": 0.5,
+    "2": 0.11578947368421053
+  }
+}

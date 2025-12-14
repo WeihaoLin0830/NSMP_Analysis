@@ -1,0 +1,59 @@
+{
+  "expected_columns": [
+    "imc",
+    "valor_de_ca125",
+    "tamano_tumoral",
+    "recep_est_porcent",
+    "rece_de_Ppor",
+    "edad_en_cirugia",
+    "asa",
+    "histo_defin",
+    "grado_histologi",
+    "FIGO2023",
+    "afectacion_linf",
+    "metasta_distan",
+    "AP_centinela_pelvico",
+    "AP_ganPelv",
+    "AP_glanPaor",
+    "beta_cateninap",
+    "histo_defin__from_pre",
+    "grado_histologi__from_pre",
+    "FIGO2023__from_pre",
+    "imc_miss",
+    "tamano_tumoral_miss",
+    "valor_de_ca125_miss"
+  ],
+  "num_cols": [
+    "imc",
+    "valor_de_ca125",
+    "tamano_tumoral",
+    "recep_est_porcent",
+    "rece_de_Ppor",
+    "edad_en_cirugia"
+  ],
+  "cat_cols": [
+    "asa",
+    "histo_defin",
+    "grado_histologi",
+    "FIGO2023",
+    "afectacion_linf",
+    "metasta_distan",
+    "AP_centinela_pelvico",
+    "AP_ganPelv",
+    "AP_glanPaor",
+    "beta_cateninap"
+  ],
+  "flag_cols": [
+    "histo_defin__from_pre",
+    "grado_histologi__from_pre",
+    "FIGO2023__from_pre",
+    "imc_miss",
+    "tamano_tumoral_miss",
+    "valor_de_ca125_miss"
+  ],
+  "horizons_days": [
+    365,
+    1095,
+    1825
+  ]
+}

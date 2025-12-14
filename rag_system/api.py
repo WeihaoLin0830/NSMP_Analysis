@@ -99,13 +99,18 @@ async def startup_event():
     """Initialize RAG pipeline on startup"""
     global rag_pipeline, conversation_manager
     
+    print("=" * 50)
     print("Initializing RAG system...")
-    rag_pipeline = RAGPipeline(use_llm=False)
+    print("  - Embeddings: Local (sentence-transformers)")
+    print("  - Generation: Groq API (Llama)")
+    print("=" * 50)
+    
+    rag_pipeline = RAGPipeline()
     
     try:
         rag_pipeline.initialize()
         conversation_manager = ConversationManager(rag_pipeline)
-        print("RAG system initialized successfully")
+        print("RAG system initialized successfully!")
     except Exception as e:
         print(f"Error initializing RAG system: {e}")
         print("System will attempt to build index on first query")
@@ -127,7 +132,8 @@ async def root():
     return {
         "status": "online",
         "service": "NSMP Cancer RAG Chatbot",
-        "version": "1.0.0"
+        "version": "2.0.0",
+        "backend": "Groq + Local Embeddings",
     }
 
 
@@ -166,14 +172,18 @@ async def chat(request: ChatRequest):
                 message=request.message,
                 role=request.role
             )
+            # Get contextual suggested questions based on last query context
+            suggestions = conversation_manager.get_contextual_suggestions(
+                session_id=session_id,
+                role=request.role
+            )[:5]
         else:
             response = rag_pipeline.query(
                 question=request.message,
                 role=request.role
             )
-            
-        # Get suggested follow-up questions
-        suggestions = rag_pipeline.get_suggested_questions(request.role)[:5]
+            # Fallback to static suggestions if no conversation manager
+            suggestions = rag_pipeline.get_suggested_questions(request.role)[:5]
         
         return ChatResponse(
             answer=response.answer,
@@ -219,17 +229,20 @@ async def rebuild_index(background_tasks: BackgroundTasks):
     
     def rebuild():
         global rag_pipeline
-        rag_pipeline = RAGPipeline(use_llm=False)
+        rag_pipeline = RAGPipeline()
         rag_pipeline.vector_store.build_from_documents()
         rag_pipeline._is_initialized = True
         
         # Also regenerate questions
-        from question_generator import QuestionGenerator
-        gen = QuestionGenerator()
-        gen.load_chunks()
-        gen.extract_topics()
-        gen.generate_questions()
-        gen.save_questions()
+        try:
+            from question_generator import QuestionGenerator
+            gen = QuestionGenerator()
+            gen.load_chunks()
+            gen.extract_topics()
+            gen.generate_questions()
+            gen.save_questions()
+        except Exception as e:
+            print(f"Error regenerating questions: {e}")
         
     background_tasks.add_task(rebuild)
     

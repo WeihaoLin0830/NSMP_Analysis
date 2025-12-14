@@ -1,0 +1,81 @@
+{
+  "parent_cluster": 1,
+  "n_samples": 52,
+  "subcluster_original_counts": {
+    "11": 9,
+    "12": 43
+  },
+  "subcluster_mapped_counts": {
+    "0": 9,
+    "1": 43
+  },
+  "label_map": {
+    "original_to_model": {
+      "11": 0,
+      "12": 1
+    },
+    "model_to_original": {
+      "0": 11,
+      "1": 12
+    },
+    "original_labels_sorted": [
+      11,
+      12
+    ]
+  },
+  "cv": {
+    "n_splits": 5,
+    "balanced_accuracy_mean": 0.9388888888888889,
+    "balanced_accuracy_std": 0.10829771494232182,
+    "f1_mean": 0.9777089783281733,
+    "f1_std": 0.03060164406972526,
+    "confusion_matrix_sum": [
+      [
+        8,
+        1
+      ],
+      [
+        1,
+        42
+      ]
+    ]
+  },
+  "train_confusion_matrix": [
+    [
+      9,
+      0
+    ],
+    [
+      0,
+      43
+    ]
+  ],
+  "model": {
+    "type": "LogisticRegression",
+    "params": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": null,
+      "max_iter": 5000,
+      "multi_class": "deprecated",
+      "n_jobs": null,
+      "penalty": "l2",
+      "random_state": 42,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    }
+  },
+  "versions": {
+    "python": "3.10.12 (main, Nov  4 2025, 08:48:33) [GCC 11.4.0]",
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "sklearn": "1.7.2",
+    "joblib": "1.5.2"
+  }
+}

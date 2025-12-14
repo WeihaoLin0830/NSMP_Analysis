@@ -39,151 +39,151 @@ CATEGORÍA: MÉDICO
 CATEGORÍA: TRATAMIENTO
 ------------------------------------------------------------
 
-• ¿Cuál es el tratamiento recomendado para Gynecol?
-• ¿Cuál es el tratamiento recomendado para Gynecology?
-• ¿Cuál es el tratamiento recomendado para Nivel?
-• ¿Cuál es el tratamiento recomendado para perfil molecular?
-• ¿Cuál es el tratamiento recomendado para p53?
-• ¿Cuál es el tratamiento recomendado para Recommendations?
-• ¿Cuál es el tratamiento recomendado para carcinoma endometrial?
-• ¿Cuál es el tratamiento recomendado para riesgo intermedio?
-• ¿Cuál es el tratamiento recomendado para Early?
 • ¿Cuál es el tratamiento recomendado para histerectomía?
-• ¿Cuál es el tratamiento recomendado para linfadenectomía?
-• ¿Cuál es el tratamiento recomendado para CA-125?
-• ¿Cuál es el tratamiento recomendado para citorreducción?
-• ¿Cuál es el tratamiento recomendado para Estadio?
-• ¿Cuál es el tratamiento recomendado para NSMP?
-• ¿Cuál es el tratamiento recomendado para recurrencia?
-• ¿Cuál es el tratamiento recomendado para Obstetrics?
-• ¿Cuál es el tratamiento recomendado para Figure?
-• ¿Cuál es el tratamiento recomendado para Prof?
+• ¿Cuál es el tratamiento recomendado para Oncology?
+• ¿Cuál es el tratamiento recomendado para alto riesgo?
+• ¿Cuál es el tratamiento recomendado para grado?
 • ¿Cuál es el tratamiento recomendado para células claras?
+• ¿Cuál es el tratamiento recomendado para Prof?
+• ¿Cuál es el tratamiento recomendado para NSMP?
+• ¿Cuál es el tratamiento recomendado para carcinoma endometrial?
+• ¿Cuál es el tratamiento recomendado para Sentinel?
+• ¿Cuál es el tratamiento recomendado para Concin?
+• ¿Cuál es el tratamiento recomendado para European Society?
+• ¿Cuál es el tratamiento recomendado para Estadio?
+• ¿Cuál es el tratamiento recomendado para Figure?
+• ¿Cuál es el tratamiento recomendado para Clin Oncol?
+• ¿Cuál es el tratamiento recomendado para riesgo intermedio?
+• ¿Cuál es el tratamiento recomendado para Medicine?
+• ¿Cuál es el tratamiento recomendado para Surgery?
+• ¿Cuál es el tratamiento recomendado para This?
+• ¿Cuál es el tratamiento recomendado para Pathology?
+• ¿Cuál es el tratamiento recomendado para supervivencia?
 
 ------------------------------------------------------------
 CATEGORÍA: DIAGNÓSTICO
 ------------------------------------------------------------
 
-• ¿Cómo se diagnostica Gynecol?
-• ¿Cómo se diagnostica Gynecology?
-• ¿Cómo se diagnostica Nivel?
-• ¿Cómo se diagnostica perfil molecular?
-• ¿Cómo se diagnostica p53?
-• ¿Cómo se diagnostica Recommendations?
-• ¿Cómo se diagnostica carcinoma endometrial?
-• ¿Cómo se diagnostica riesgo intermedio?
-• ¿Cómo se diagnostica Early?
 • ¿Cómo se diagnostica histerectomía?
-• ¿Cómo se diagnostica linfadenectomía?
-• ¿Cómo se diagnostica CA-125?
-• ¿Cómo se diagnostica citorreducción?
-• ¿Cómo se diagnostica Estadio?
-• ¿Cómo se diagnostica NSMP?
-• ¿Cómo se diagnostica recurrencia?
-• ¿Cómo se diagnostica Obstetrics?
-• ¿Cómo se diagnostica Figure?
-• ¿Cómo se diagnostica Prof?
+• ¿Cómo se diagnostica Oncology?
+• ¿Cómo se diagnostica alto riesgo?
+• ¿Cómo se diagnostica grado?
 • ¿Cómo se diagnostica células claras?
+• ¿Cómo se diagnostica Prof?
+• ¿Cómo se diagnostica NSMP?
+• ¿Cómo se diagnostica carcinoma endometrial?
+• ¿Cómo se diagnostica Sentinel?
+• ¿Cómo se diagnostica Concin?
+• ¿Cómo se diagnostica European Society?
+• ¿Cómo se diagnostica Estadio?
+• ¿Cómo se diagnostica Figure?
+• ¿Cómo se diagnostica Clin Oncol?
+• ¿Cómo se diagnostica riesgo intermedio?
+• ¿Cómo se diagnostica Medicine?
+• ¿Cómo se diagnostica Surgery?
+• ¿Cómo se diagnostica This?
+• ¿Cómo se diagnostica Pathology?
+• ¿Cómo se diagnostica supervivencia?
 
 ------------------------------------------------------------
 CATEGORÍA: PRONÓSTICO
 ------------------------------------------------------------
 
-• ¿Cuál es el pronóstico para pacientes con Gynecol?
-• ¿Cuál es el pronóstico para pacientes con Gynecology?
-• ¿Cuál es el pronóstico para pacientes con Nivel?
-• ¿Cuál es el pronóstico para pacientes con perfil molecular?
-• ¿Cuál es el pronóstico para pacientes con p53?
-• ¿Cuál es el pronóstico para pacientes con Recommendations?
-• ¿Cuál es el pronóstico para pacientes con carcinoma endometrial?
-• ¿Cuál es el pronóstico para pacientes con riesgo intermedio?
-• ¿Cuál es el pronóstico para pacientes con Early?
 • ¿Cuál es el pronóstico para pacientes con histerectomía?
-• ¿Cuál es el pronóstico para pacientes con linfadenectomía?
-• ¿Cuál es el pronóstico para pacientes con CA-125?
-• ¿Cuál es el pronóstico para pacientes con citorreducción?
-• ¿Cuál es el pronóstico para pacientes con Estadio?
-• ¿Cuál es el pronóstico para pacientes con NSMP?
-• ¿Cuál es el pronóstico para pacientes con recurrencia?
-• ¿Cuál es el pronóstico para pacientes con Obstetrics?
-• ¿Cuál es el pronóstico para pacientes con Figure?
-• ¿Cuál es el pronóstico para pacientes con Prof?
+• ¿Cuál es el pronóstico para pacientes con Oncology?
+• ¿Cuál es el pronóstico para pacientes con alto riesgo?
+• ¿Cuál es el pronóstico para pacientes con grado?
 • ¿Cuál es el pronóstico para pacientes con células claras?
+• ¿Cuál es el pronóstico para pacientes con Prof?
+• ¿Cuál es el pronóstico para pacientes con NSMP?
+• ¿Cuál es el pronóstico para pacientes con carcinoma endometrial?
+• ¿Cuál es el pronóstico para pacientes con Sentinel?
+• ¿Cuál es el pronóstico para pacientes con Concin?
+• ¿Cuál es el pronóstico para pacientes con European Society?
+• ¿Cuál es el pronóstico para pacientes con Estadio?
+• ¿Cuál es el pronóstico para pacientes con Figure?
+• ¿Cuál es el pronóstico para pacientes con Clin Oncol?
+• ¿Cuál es el pronóstico para pacientes con riesgo intermedio?
+• ¿Cuál es el pronóstico para pacientes con Medicine?
+• ¿Cuál es el pronóstico para pacientes con Surgery?
+• ¿Cuál es el pronóstico para pacientes con This?
+• ¿Cuál es el pronóstico para pacientes con Pathology?
+• ¿Cuál es el pronóstico para pacientes con supervivencia?
 
 ------------------------------------------------------------
 CATEGORÍA: RIESGO
 ------------------------------------------------------------
 
-• ¿Cuáles son los factores de riesgo para Gynecol?
-• ¿Cuáles son los factores de riesgo para Gynecology?
-• ¿Cuáles son los factores de riesgo para Nivel?
-• ¿Cuáles son los factores de riesgo para perfil molecular?
-• ¿Cuáles son los factores de riesgo para p53?
-• ¿Cuáles son los factores de riesgo para Recommendations?
-• ¿Cuáles son los factores de riesgo para carcinoma endometrial?
-• ¿Cuáles son los factores de riesgo para riesgo intermedio?
-• ¿Cuáles son los factores de riesgo para Early?
 • ¿Cuáles son los factores de riesgo para histerectomía?
-• ¿Cuáles son los factores de riesgo para linfadenectomía?
-• ¿Cuáles son los factores de riesgo para CA-125?
-• ¿Cuáles son los factores de riesgo para citorreducción?
-• ¿Cuáles son los factores de riesgo para Estadio?
-• ¿Cuáles son los factores de riesgo para NSMP?
-• ¿Cuáles son los factores de riesgo para recurrencia?
-• ¿Cuáles son los factores de riesgo para Obstetrics?
-• ¿Cuáles son los factores de riesgo para Figure?
-• ¿Cuáles son los factores de riesgo para Prof?
+• ¿Cuáles son los factores de riesgo para Oncology?
+• ¿Cuáles son los factores de riesgo para alto riesgo?
+• ¿Cuáles son los factores de riesgo para grado?
 • ¿Cuáles son los factores de riesgo para células claras?
+• ¿Cuáles son los factores de riesgo para Prof?
+• ¿Cuáles son los factores de riesgo para NSMP?
+• ¿Cuáles son los factores de riesgo para carcinoma endometrial?
+• ¿Cuáles son los factores de riesgo para Sentinel?
+• ¿Cuáles son los factores de riesgo para Concin?
+• ¿Cuáles son los factores de riesgo para European Society?
+• ¿Cuáles son los factores de riesgo para Estadio?
+• ¿Cuáles son los factores de riesgo para Figure?
+• ¿Cuáles son los factores de riesgo para Clin Oncol?
+• ¿Cuáles son los factores de riesgo para riesgo intermedio?
+• ¿Cuáles son los factores de riesgo para Medicine?
+• ¿Cuáles son los factores de riesgo para Surgery?
+• ¿Cuáles son los factores de riesgo para This?
+• ¿Cuáles son los factores de riesgo para Pathology?
+• ¿Cuáles son los factores de riesgo para supervivencia?
 
 ------------------------------------------------------------
 CATEGORÍA: SÍNTOMAS
 ------------------------------------------------------------
 
-• ¿Cuáles son los síntomas de Gynecol?
-• ¿Cuáles son los síntomas de Gynecology?
-• ¿Cuáles son los síntomas de Nivel?
-• ¿Cuáles son los síntomas de perfil molecular?
-• ¿Cuáles son los síntomas de p53?
-• ¿Cuáles son los síntomas de Recommendations?
-• ¿Cuáles son los síntomas de carcinoma endometrial?
-• ¿Cuáles son los síntomas de riesgo intermedio?
-• ¿Cuáles son los síntomas de Early?
 • ¿Cuáles son los síntomas de histerectomía?
-• ¿Cuáles son los síntomas de linfadenectomía?
-• ¿Cuáles son los síntomas de CA-125?
-• ¿Cuáles son los síntomas de citorreducción?
-• ¿Cuáles son los síntomas de Estadio?
-• ¿Cuáles son los síntomas de NSMP?
-• ¿Cuáles son los síntomas de recurrencia?
-• ¿Cuáles son los síntomas de Obstetrics?
-• ¿Cuáles son los síntomas de Figure?
-• ¿Cuáles son los síntomas de Prof?
+• ¿Cuáles son los síntomas de Oncology?
+• ¿Cuáles son los síntomas de alto riesgo?
+• ¿Cuáles son los síntomas de grado?
 • ¿Cuáles son los síntomas de células claras?
+• ¿Cuáles son los síntomas de Prof?
+• ¿Cuáles son los síntomas de NSMP?
+• ¿Cuáles son los síntomas de carcinoma endometrial?
+• ¿Cuáles son los síntomas de Sentinel?
+• ¿Cuáles son los síntomas de Concin?
+• ¿Cuáles son los síntomas de European Society?
+• ¿Cuáles son los síntomas de Estadio?
+• ¿Cuáles son los síntomas de Figure?
+• ¿Cuáles son los síntomas de Clin Oncol?
+• ¿Cuáles son los síntomas de riesgo intermedio?
+• ¿Cuáles son los síntomas de Medicine?
+• ¿Cuáles son los síntomas de Surgery?
+• ¿Cuáles son los síntomas de This?
+• ¿Cuáles son los síntomas de Pathology?
+• ¿Cuáles son los síntomas de supervivencia?
 
 ------------------------------------------------------------
 CATEGORÍA: SEGUIMIENTO
 ------------------------------------------------------------
 
-• ¿Cuál es el seguimiento recomendado para Gynecol?
-• ¿Cuál es el seguimiento recomendado para Gynecology?
-• ¿Cuál es el seguimiento recomendado para Nivel?
-• ¿Cuál es el seguimiento recomendado para perfil molecular?
-• ¿Cuál es el seguimiento recomendado para p53?
-• ¿Cuál es el seguimiento recomendado para Recommendations?
-• ¿Cuál es el seguimiento recomendado para carcinoma endometrial?
-• ¿Cuál es el seguimiento recomendado para riesgo intermedio?
-• ¿Cuál es el seguimiento recomendado para Early?
 • ¿Cuál es el seguimiento recomendado para histerectomía?
-• ¿Cuál es el seguimiento recomendado para linfadenectomía?
-• ¿Cuál es el seguimiento recomendado para CA-125?
-• ¿Cuál es el seguimiento recomendado para citorreducción?
-• ¿Cuál es el seguimiento recomendado para Estadio?
-• ¿Cuál es el seguimiento recomendado para NSMP?
-• ¿Cuál es el seguimiento recomendado para recurrencia?
-• ¿Cuál es el seguimiento recomendado para Obstetrics?
-• ¿Cuál es el seguimiento recomendado para Figure?
-• ¿Cuál es el seguimiento recomendado para Prof?
+• ¿Cuál es el seguimiento recomendado para Oncology?
+• ¿Cuál es el seguimiento recomendado para alto riesgo?
+• ¿Cuál es el seguimiento recomendado para grado?
 • ¿Cuál es el seguimiento recomendado para células claras?
+• ¿Cuál es el seguimiento recomendado para Prof?
+• ¿Cuál es el seguimiento recomendado para NSMP?
+• ¿Cuál es el seguimiento recomendado para carcinoma endometrial?
+• ¿Cuál es el seguimiento recomendado para Sentinel?
+• ¿Cuál es el seguimiento recomendado para Concin?
+• ¿Cuál es el seguimiento recomendado para European Society?
+• ¿Cuál es el seguimiento recomendado para Estadio?
+• ¿Cuál es el seguimiento recomendado para Figure?
+• ¿Cuál es el seguimiento recomendado para Clin Oncol?
+• ¿Cuál es el seguimiento recomendado para riesgo intermedio?
+• ¿Cuál es el seguimiento recomendado para Medicine?
+• ¿Cuál es el seguimiento recomendado para Surgery?
+• ¿Cuál es el seguimiento recomendado para This?
+• ¿Cuál es el seguimiento recomendado para Pathology?
+• ¿Cuál es el seguimiento recomendado para supervivencia?
 
 ================================================================================
 Total de preguntas generadas: 135

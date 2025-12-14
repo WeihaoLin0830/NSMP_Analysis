@@ -1,6 +1,11 @@
 """
 Embedding and Indexing Module
 Handles vector embeddings and FAISS index for semantic search
+Uses local sentence-transformers (BGE model) for embeddings
+
+Architecture:
+- Embeddings: sentence-transformers (BAAI/bge-base-en-v1.5)
+- Vector DB: FAISS with IndexFlatIP (cosine similarity via normalized vectors)
 """
 import json
 import numpy as np
@@ -14,6 +19,7 @@ from tqdm import tqdm
 from config import (
     EMBEDDING_MODEL,
     EMBEDDING_DIMENSION,
+    EMBEDDING_QUERY_PREFIX,
     FAISS_INDEX_PATH,
     CHUNKS_METADATA_PATH,
     TOP_K_RESULTS,
@@ -32,40 +38,90 @@ class SearchResult:
 
 
 class EmbeddingModel:
-    """Handles text embedding using Sentence Transformers"""
+    """
+    Handles text embedding using local sentence-transformers
     
-    def __init__(self, model_name: str = EMBEDDING_MODEL):
+    Uses BGE (BAAI General Embedding) model which is optimized for RAG:
+    - Supports query/document distinction
+    - Good multilingual performance
+    - 768-dimensional embeddings
+    """
+    
+    def __init__(self, model_name: str = None):
+        """
+        Initialize the embedding model
+        
+        Args:
+            model_name: Model to use (default from config)
+        """
+        model_name = model_name or EMBEDDING_MODEL
         print(f"Loading embedding model: {model_name}")
+        print("(This may take a moment on first run...)")
+        
         self.model = SentenceTransformer(model_name)
         self.dimension = EMBEDDING_DIMENSION
+        self.query_prefix = EMBEDDING_QUERY_PREFIX
+        
+        print(f"Embedding model ready (dimension: {self.dimension})")
         
     def encode(self, texts: List[str], show_progress: bool = True) -> np.ndarray:
         """
         Encode texts into embeddings
         
         Args:
-            texts: List of texts to encode
+            texts: List of texts to encode (documents/chunks)
             show_progress: Whether to show progress bar
             
         Returns:
-            Numpy array of embeddings
+            Numpy array of embeddings (normalized for cosine similarity)
         """
         embeddings = self.model.encode(
             texts,
             show_progress_bar=show_progress,
             convert_to_numpy=True,
-            normalize_embeddings=True  # L2 normalize for cosine similarity
+            normalize_embeddings=True,  # L2 normalize for cosine similarity
+            batch_size=32,
         )
         return embeddings
     
-    def encode_single(self, text: str) -> np.ndarray:
-        """Encode a single text into embedding"""
+    def encode_single(self, text: str, is_query: bool = False) -> np.ndarray:
+        """
+        Encode a single text into embedding
+        
+        Args:
+            text: Text to encode
+            is_query: If True, add query prefix for better retrieval
+            
+        Returns:
+            Normalized embedding vector
+        """
+        # BGE models benefit from query instruction prefix
+        if is_query and self.query_prefix:
+            text = self.query_prefix + text
+            
         embedding = self.model.encode(
             [text],
             convert_to_numpy=True,
-            normalize_embeddings=True
-        )
-        return embedding[0]
+            normalize_embeddings=True,
+        )[0]
+        
+        return embedding
+    
+    def encode_queries(self, queries: List[str]) -> np.ndarray:
+        """
+        Encode multiple queries with query prefix
+        
+        Args:
+            queries: List of query strings
+            
+        Returns:
+            Numpy array of query embeddings
+        """
+        # Add query prefix to all queries
+        if self.query_prefix:
+            queries = [self.query_prefix + q for q in queries]
+            
+        return self.encode(queries, show_progress=False)
 
 
 class FAISSIndex:
@@ -189,7 +245,7 @@ class VectorStore:
             
     def search(self, query: str, top_k: int = TOP_K_RESULTS) -> List[SearchResult]:
         """
-        Search for relevant chunks
+        Search for relevant chunks using query-optimized embedding
         
         Args:
             query: Search query
@@ -198,7 +254,7 @@ class VectorStore:
         Returns:
             List of SearchResult objects
         """
-        query_embedding = self.embedding_model.encode_single(query)
+        query_embedding = self.embedding_model.encode_single(query, is_query=True)
         results = self.faiss_index.search(query_embedding, top_k)
         return results
     
@@ -217,7 +273,7 @@ class VectorStore:
         
         context_parts = []
         for result in results:
-            source = f"[Fuente: {result.chunk.document_name}, Página {result.chunk.page_number}]"
+            source = f"[Fuente: {result.chunk.document_name}, Página {result.chunk.page_start}]"
             context_parts.append(f"{source}\n{result.chunk.content}")
             
         return "\n\n---\n\n".join(context_parts)
@@ -241,5 +297,5 @@ if __name__ == "__main__":
         results = vector_store.search(query, top_k=3)
         for result in results:
             print(f"  [{result.rank}] Score: {result.similarity_score:.3f}")
-            print(f"      Source: {result.chunk.document_name} (p.{result.chunk.page_number})")
+            print(f"      Source: {result.chunk.document_name} (p.{result.chunk.page_start})")
             print(f"      Preview: {result.chunk.content[:100]}...")

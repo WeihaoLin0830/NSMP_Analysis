@@ -177,7 +177,7 @@ class ChatBox {
         this.suggestedQuestions.slice(0, 4).forEach(question => {
             const chip = document.createElement('button');
             chip.className = 'suggestion-chip';
-            chip.textContent = question.length > 40 ? question.substring(0, 40) + '...' : question;
+            chip.textContent = question.length > 50 ? question.substring(0, 50) + '...' : question;
             chip.title = question;
             chip.addEventListener('click', () => {
                 this.elements.input.value = question;
@@ -185,6 +185,42 @@ class ChatBox {
             });
             container.appendChild(chip);
         });
+        
+        // Scroll to show the suggestions
+        this.scrollToBottom();
+    }
+    
+    renderInlineSuggestions() {
+        // Remove any existing inline suggestions
+        const existing = this.elements.messages.querySelector('.inline-suggestions');
+        if (existing) {
+            existing.remove();
+        }
+        
+        // Create inline suggestions widget in the messages area
+        const suggestionsDiv = document.createElement('div');
+        suggestionsDiv.className = 'inline-suggestions';
+        suggestionsDiv.innerHTML = `
+            <div class="inline-suggestions-title">💡 Preguntas que podrías hacer:</div>
+            <div class="inline-suggestions-list"></div>
+        `;
+        
+        const listContainer = suggestionsDiv.querySelector('.inline-suggestions-list');
+        
+        this.suggestedQuestions.slice(0, 4).forEach(question => {
+            const chip = document.createElement('button');
+            chip.className = 'suggestion-chip';
+            chip.textContent = question.length > 50 ? question.substring(0, 50) + '...' : question;
+            chip.title = question;
+            chip.addEventListener('click', () => {
+                this.elements.input.value = question;
+                this.sendMessage();
+            });
+            listContainer.appendChild(chip);
+        });
+        
+        this.elements.messages.appendChild(suggestionsDiv);
+        this.scrollToBottom();
     }
     
     toggle() {
@@ -217,8 +253,14 @@ class ChatBox {
         this.elements.input.value = '';
         this.elements.input.style.height = 'auto';
         
-        // Hide suggestions after first message
+        // Hide suggestions while waiting for response (will show again after response)
         this.elements.suggestionsContainer.style.display = 'none';
+        
+        // Remove any inline suggestions when sending a new message
+        const existingInline = this.elements.messages.querySelector('.inline-suggestions');
+        if (existingInline) {
+            existingInline.remove();
+        }
         
         // Add user message
         this.addMessage('user', message);
@@ -255,6 +297,13 @@ class ChatBox {
             // Update session ID if provided
             if (data.session_id) {
                 this.sessionId = data.session_id;
+            }
+            
+            // Update and show new suggested questions after each response
+            if (data.suggested_questions && data.suggested_questions.length > 0) {
+                this.suggestedQuestions = data.suggested_questions;
+                // Show suggestions inline in the messages area
+                this.renderInlineSuggestions();
             }
             
         } catch (error) {
