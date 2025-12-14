@@ -1,0 +1,535 @@
+DIAGNÓSTICO,,,
+,,,
+variable,DescripciÃ³n,valor,texto
+despues_diag,Despues del diagnostico. ¿La paciente decide tratarse en el hospital Santa Creu i Sant Pau?,0,No
+despues_diag,Despues del diagnostico. ¿La paciente decide tratarse en el hospital Santa Creu i Sant Pau?,1,Si
+,,,
+ecotv_infiltobj,Infiltración miometrial- Método objetivo (Karlsson),1,No aplicado
+ecotv_infiltobj,Infiltración miometrial- Método objetivo (Karlsson),2,<50% 
+ecotv_infiltobj,Infiltración miometrial- Método objetivo (Karlsson),3,>50%
+ecotv_infiltobj,Infiltración miometrial- Método objetivo (Karlsson),4, No valorable
+,,,
+ecotv_infiltsub,Infiltración miometrial- Método subjetivo,1,No aplicado
+ecotv_infiltsub,Infiltración miometrial- Método subjetivo,2,<50% 
+ecotv_infiltsub,Infiltración miometrial- Método subjetivo,3,>50%
+ecotv_infiltsub,Infiltración miometrial- Método subjetivo,4, No valorable
+,,,
+edad,Edad,,
+,,,
+estadiaje_pre_i,Estadiaje Pre_IQ,0,Estadio I
+estadiaje_pre_i,Estadiaje Pre_IQ,1,Estadio II
+estadiaje_pre_i,Estadiaje Pre_IQ,2,Estadio III y IV
+,,,
+FN,Fecha de Nacimiento,,
+,,,
+f_1v,Fecha Primera visita,,
+,,,
+f_diag,Fecha diagnóstico,,
+,,,
+Grado,Grado,1,Bajo grado (G1-G2)
+Grado,Grado,2, Alto grado (G3)
+,,,
+grupo_riesgo,Grupo de riesgo preoperatorio,1,Riesgo bajo
+grupo_riesgo,Grupo de riesgo preoperatorio,2,Riego intermedio
+grupo_riesgo,Grupo de riesgo preoperatorio,3,Riesgo alto
+,,,
+imc,IMC,,
+,,,
+metasta_distan,Metástasis a distancia,0,No
+metasta_distan,Metástasis a distancia,1,Si
+,,,
+otra_histo,Otra histología,,
+,,,
+tipo_histologico,Tipo Histológico,1, Hiperplasia con atípias
+tipo_histologico,Tipo Histológico,2,Carcinoma endometroide
+tipo_histologico,Tipo Histológico,3,Carcinoma seroso
+tipo_histologico,Tipo Histológico,4,Carcinoma Celulas claras
+tipo_histologico,Tipo Histológico,5,Carcinoma Indiferenciado
+tipo_histologico,Tipo Histológico,6,Carcinoma Mixto
+tipo_histologico,Tipo Histológico,7,Carcinoma Escamoso
+tipo_histologico,Tipo Histológico,8, Carcinosarcoma
+tipo_histologico,Tipo Histológico,9,Leiomiosarcoma
+tipo_histologico,Tipo Histológico,10,Sarcoma de estroma endometrial
+tipo_histologico,Tipo Histológico,11,Sarcoma indiferenciado
+tipo_histologico,Tipo Histológico,12,Adenosarcoma
+tipo_histologico,Tipo Histológico,88,Otros
+,,,
+valor_de_ca125,Valor de ca125 (pre_quirurgico inicial),,
+,,,
+TRATAMIENTO,,,
+,,,
+variable,DescripciÃ³n,valor,texto
+abordajeqx,Vía de abordaje inicial,1,Laparoscopia
+abordajeqx,Vía de abordaje inicial,2,Laparotomía
+abordajeqx,Vía de abordaje inicial,3,Robotica
+abordajeqx,Vía de abordaje inicial,4,Vaginal
+,,,
+afectacion_linf,Afectación linfovascular,0,No
+afectacion_linf,Afectación linfovascular,1,Si
+,,,
+afectacion_omen,Afectación Omento,0,No
+afectacion_omen,Afectación Omento,1,Si
+,,,
+Anexectomia,Anexectomía,0,No
+Anexectomia,Anexectomía,1,Si
+,,,
+AP_centinela_pelvico,AP centinela pélvico,0,Negativo (pN0)
+AP_centinela_pelvico,AP centinela pélvico,1,Cels. tumorales aisladas (pN0(i+))
+AP_centinela_pelvico,AP centinela pélvico,2,Micrometastasis (pN1(mi))
+AP_centinela_pelvico,AP centinela pélvico,3,Macrometastasis (pN1)
+AP_centinela_pelvico,AP centinela pélvico,4,pNx
+,,,
+ap_comentarios,AP comentarios relevantes,,
+,,,
+AP_ganPelv,AP ganglios pélvicos,0,Negativo
+AP_ganPelv,AP ganglios pélvicos,1,Cels. tumorales aisladas
+AP_ganPelv,AP ganglios pélvicos,2,Micrometastasis
+AP_ganPelv,AP ganglios pélvicos,3,Macrometastasis
+,,,
+AP_glanPaor,AP Ganglios Paraórticos ,0,Negativo
+AP_glanPaor,AP Ganglios Paraórticos ,1,Cels. tumorales aisladas
+AP_glanPaor,AP Ganglios Paraórticos ,2,Micrometastasis
+AP_glanPaor,AP Ganglios Paraórticos ,3,Macrometastasis
+,,,
+ap_gPaor_total,AP Total Nº G. Paraórticos,,
+,,,
+ap_gPelv_loc,AP Glanglios Pélvicos-Localización,0,Izquierda
+ap_gPelv_loc,AP Glanglios Pélvicos-Localización,1,Derecha
+ap_gPelv_loc,AP Glanglios Pélvicos-Localización,2,Bilateral
+,,,
+ap_gPor_afect_tot,AP Nº total G. Paraórticos afectados,,
+,,,
+asa,ASA,0,ASA 1 
+asa,ASA,1,ASA 2
+asa,ASA,2,ASA 3
+asa,ASA,3,ASA 4
+asa,ASA,4,ASA 5
+asa,ASA,5,ASA 6
+asa,ASA,6,Desconocido
+,,,
+beta_cateninap,Beta Catenina(Positividad nuclear),0,No
+beta_cateninap,Beta Catenina(Positividad nuclear),1,Si
+beta_cateninap,Beta Catenina(Positividad nuclear),2,No realizado
+,,,
+bqt,¿Tributaria a Braquiterapia?,0,No
+bqt,¿Tributaria a Braquiterapia?,1,Si
+,,,
+bt_realPac,BT realizada por la paciente,0,Desestimada
+bt_realPac,BT realizada por la paciente,1,Realizada
+,,,
+centro_tratPrima,¿En qué centro de salud recibió el primer tratamiento?,,
+,,,
+ciclos_tto_NAdj,Nº de ciclos de tto Neo Adyuvante recibidos,,
+,,,
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,1,Ninguna
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,2,Lesión Vesical
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,3,Lesión Ureteral
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,4,Lesión Intestinal
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,5,Hemorragia post-operatoria
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,6,Infección urinaria
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,7,Infección Herida quirúrgica
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,8,Infección respiratoria
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,9,Complicación Cardiaca
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,10,TVP
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,11,Ileo paralítico
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,12,Presencia de linfocele asintomático
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,13,Presencia de linfocele sintomático
+compl_precoc,Complicaciones post-operatorias precoces (<1mes) Clavien Dindo,14,TEP
+,,,
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,1,Grado I
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,2,Grado II
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,3,Grado IIIa
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,4,Grado IIIb
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,5,Grado IVa
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,6,Grado IVb
+comp_claviendin_mes,Grado de Complicacion <1mes- (Clavien Dindo): ,5,Grado V
+,,,
+comp_intraop,¿Presento complicaciones Intraoperatorias?,1,Ninguna
+comp_intraop,¿Presento complicaciones Intraoperatorias?,2,Lesión urológica
+comp_intraop,¿Presento complicaciones Intraoperatorias?,3,Lesión intestinal
+comp_intraop,¿Presento complicaciones Intraoperatorias?,4,Lesión vascular
+comp_intraop,¿Presento complicaciones Intraoperatorias?,5,Lesión nerviosa
+comp_intraop,¿Presento complicaciones Intraoperatorias?,6,Complicaciones anestésicas
+comp_intraop,¿Presento complicaciones Intraoperatorias?,7,Otras
+,,,
+conver_laparo,Conversión a Laparatomía ,0,No
+conver_laparo,Conversión a Laparatomía ,1,Si
+,,,
+dias_de_ingreso,Días de ingreso hospitalario,,
+,,,
+estadificacion_,Estadio Quirúrgico FIGO 2018,1,Ia
+estadificacion_,Estadio Quirúrgico FIGO 2018,2,Ib
+estadificacion_,Estadio Quirúrgico FIGO 2018,3,II
+estadificacion_,Estadio Quirúrgico FIGO 2018,4,IIIa
+estadificacion_,Estadio Quirúrgico FIGO 2018,5,IIIb
+estadificacion_,Estadio Quirúrgico FIGO 2018,6,IIIc1
+estadificacion_,Estadio Quirúrgico FIGO 2018,7,IIIc2
+estadificacion_,Estadio Quirúrgico FIGO 2018,8,IVa
+estadificacion_,Estadio Quirúrgico FIGO 2018,9,IVb
+,,,
+estudio_genetico,Estudio genetico,1,Negativo
+estudio_genetico,Estudio genetico,2,BRCA1
+estudio_genetico,Estudio genetico,3,BRCA2
+estudio_genetico,Estudio genetico,4,Lynch
+estudio_genetico,Estudio genetico,5,Otros
+estudio_genetico,Estudio genetico,6,No realizado
+,,,
+fecha_final_qmt,Fecha  final de Quimioterapia,,
+,,,
+fecha_qx,Fecha de Cirugía,,
+,,,
+FIGO2023,Estadiaje quirugico FIGO 2023,1,IA1
+FIGO2023,Estadiaje quirugico FIGO 2023,2,IA2
+FIGO2023,Estadiaje quirugico FIGO 2023,3,IA3
+FIGO2023,Estadiaje quirugico FIGO 2023,4,IB
+FIGO2023,Estadiaje quirugico FIGO 2023,5,IC
+FIGO2023,Estadiaje quirugico FIGO 2023,6,IIA
+FIGO2023,Estadiaje quirugico FIGO 2023,7,IIB
+FIGO2023,Estadiaje quirugico FIGO 2023,8,IIC
+FIGO2023,Estadiaje quirugico FIGO 2023,9,IIIA
+FIGO2023,Estadiaje quirugico FIGO 2023,10,IIIB
+FIGO2023,Estadiaje quirugico FIGO 2023,11,IIIC
+FIGO2023,Estadiaje quirugico FIGO 2023,12,IVA
+FIGO2023,Estadiaje quirugico FIGO 2023,13,IVB
+FIGO2023,Estadiaje quirugico FIGO 2023,14,IVC
+,,,
+final_bqt_rt,Fecha de final de BT/RT,,
+,,,
+f_tto_NA,Fecha tto NA,,
+,,,
+gc_ap,Técnica/Ganglio Centinela AP intraoperatoria,0,No realizado
+gc_ap,Técnica/Ganglio Centinela AP intraoperatoria,1,Negativo
+gc_ap,Técnica/Ganglio Centinela AP intraoperatoria,2,Positivo
+,,,
+gc_lpd,Técnica/GC Lateralidad pélvica derecha (localización),0,No migra
+gc_lpd,Técnica/GC Lateralidad pélvica derecha (localización),1,Ilíaca
+gc_lpd,Técnica/GC Lateralidad pélvica derecha (localización),2,Obturatriz
+,,,
+gc_lpi,Tecnica/GC Lateralidad pélvica izquierda (localización),0,No migra
+gc_lpi,Tecnica/GC Lateralidad pélvica izquierda (localización),1,Ilíaca
+gc_lpi,Tecnica/GC Lateralidad pélvica izquierda (localización),2,Obturatriz
+,,,
+gc_paraor,Técnica/GC Paraórtica,1,Interilíacos
+gc_paraor,Técnica/GC Paraórtica,2,Inframesentéricos
+gc_paraor,Técnica/GC Paraórtica,3,Supramesentéricos
+gc_paraor,Técnica/GC Paraórtica,9,No encontrado
+,,,
+grado_histologi,Grado Histológico,1,Bajo grado (G1-G2)
+grado_histologi,Grado Histológico,2,Alto grado (G3)
+,,,
+grupo_de_riesgo_definitivo,Grupo de riesgo definitivo,1,Riesgo bajo
+grupo_de_riesgo_definitivo,Grupo de riesgo definitivo,2,Riesgo intermedio
+grupo_de_riesgo_definitivo,Grupo de riesgo definitivo,3,Riesgo intermedio-alto
+grupo_de_riesgo_definitivo,Grupo de riesgo definitivo,4,Riesgo alto
+grupo_de_riesgo_definitivo,Grupo de riesgo definitivo,5,Avanzados
+,,,
+histe_avanz,Histerectomía,0,Si
+histe_avanz,Histerectomía,1,No
+histe_avanz,Histerectomía,2,No aplica
+,,,
+histo_defin,Tipo Histológico Definitivo,1,Hiperplasia con atipias
+histo_defin,Tipo Histológico Definitivo,2,Carcinoma endometrioide
+histo_defin,Tipo Histológico Definitivo,3,Carcinoma seroso
+histo_defin,Tipo Histológico Definitivo,4,Carcinoma de celulas claras
+histo_defin,Tipo Histológico Definitivo,5,Carcinoma Indiferenciado
+histo_defin,Tipo Histológico Definitivo,6,Carcinoma mixto
+histo_defin,Tipo Histológico Definitivo,7,Carcinoma escamoso
+histo_defin,Tipo Histológico Definitivo,8,Carcinosarcoma
+histo_defin,Tipo Histológico Definitivo,9,Otros
+,,,
+histo_otros,Tipo Histologico Otros- Especificar,,
+,,,
+hsp_trat_primario,¿La paciente recibió tratamiento primario en el Hospital de la Santa Creu i Sant Pau?,0,No
+hsp_trat_primario,¿La paciente recibió tratamiento primario en el Hospital de la Santa Creu i Sant Pau?,1,Si
+,,,
+infiltracion_mi,Infiltración miometrial-serosa,0,No infiltracion 
+infiltracion_mi,Infiltración miometrial-serosa,1,Infiltracion miometrial <50%
+infiltracion_mi,Infiltración miometrial-serosa,2,Infiltracion miometrial >50%
+infiltracion_mi,Infiltración miometrial-serosa,3,Infiltracion serosa
+,,,
+infilt_estr_cervix,Infiltración del Estroma Cervical,0,No
+infilt_estr_cervix,Infiltración del Estroma Cervical,1,Si
+infilt_estr_cervix,Infiltración del Estroma Cervical,2,Se desconoce
+,,,
+inf_param_vag,Infiltración Parametrios-Vagina,0,No
+inf_param_vag,Infiltración Parametrios-Vagina,1,Parametrio derecho
+inf_param_vag,Infiltración Parametrios-Vagina,2,Parametrio izquierdo
+inf_param_vag,Infiltración Parametrios-Vagina,3,Vagina
+,,,
+inicio_qmt,Fecha de inicio de QT,,
+,,,
+ini_bqt_rt,Fecha de inicio de BT/RT,,
+,,,
+inten_tto,Intención del tratamiento,1,Curativo
+inten_tto,Intención del tratamiento,2,Paliativo
+,,,
+Local_Gan_Paor,Ganglios ParaAo-Localización ,1,Inframesentericos
+Local_Gan_Paor,Ganglios ParaAo-Localización ,2,Supramesenterico
+Local_Gan_Paor,Ganglios ParaAo-Localización ,3,Infra+Supra
+,,,
+mlh1,MLH1,0,Normal
+mlh1,MLH1,1,Anormal
+mlh1,MLH1,2,No realizado
+,,,
+Motivo_de_conversion_a_LPT,Motivo de conversion a LPT,1,Medica
+Motivo_de_conversion_a_LPT,Motivo de conversion a LPT,2,Quirugica
+Motivo_de_conversion_a_LPT,Motivo de conversion a LPT,3,Dificuldad tecnica
+Motivo_de_conversion_a_LPT,Motivo de conversion a LPT,4,Enfermedad diseminada
+,,,
+motivonolaparos,Motivo de no realizar una laparoscopia como técnica inicial,1,Médica
+motivonolaparos,Motivo de no realizar una laparoscopia como técnica inicial,2,Quirúrgica
+motivonolaparos,Motivo de no realizar una laparoscopia como técnica inicial,3,Enfermedad diseminada
+,,,
+moti_no_RT,Motivo de N realizar RT:,0,Intolerancia
+moti_no_RT,Motivo de N realizar RT:,1,Negación por parte de la pacietne
+moti_no_RT,Motivo de N realizar RT:,2,Otros
+,,,
+Movilizador_uterino,Movilizador uterino,0,No
+Movilizador_uterino,Movilizador uterino,1,Si
+Movilizador_uterino,Movilizador uterino,2,Se desconoce
+,,,
+msh2,MSH2,0,Normal
+msh2,MSH2,1,Anormal
+msh2,MSH2,2,No realizado
+,,,
+msh6,MSH6,0,Normal
+msh6,MSH6,1,Anormal
+msh6,MSH6,2,No realizado
+,,,
+mut_pole,Mutación de POLE,1,Mutado
+mut_pole,Mutación de POLE,2,No Mutado
+mut_pole,Mutación de POLE,3,No realizado
+,,,
+n_doisis_rt,Nº de dosis RT,,
+,,,
+n_gangP_afec,Nº ganglios pélvicos afectados,,
+,,,
+n_ganPaor_InfrM_afec,Nº G. Paor Inframesentericos afectados: ,,
+,,,
+n_ganPaor_Sup_afec,Nº de G. Paor supramesentéricos afectados:,,
+,,,
+n_GC_Afect,Nº de Glanglios centinelas afectados,,
+,,,
+n_resec_Intes,Nº de resecciones intestinales realizadas ,,
+,,,
+n_total_ganCent,Nº Total de ganglios pélvicos linfadenectomía,,
+,,,
+n_total_ganPaor_infra,Nº total de G. Paor  inframesentéricos,,
+,,,
+n_total_ganPaor_supr,Nº total G Paor supremensentéricos,,
+,,,
+n_total_GC,Nº Total de Ganglio Centinela,,
+,,,
+omentectomia,Omentectomía,0,No
+omentectomia,Omentectomía,1,Si
+,,,
+oment_Avan,Omentectomía,0,Si
+oment_Avan,Omentectomía,1,No
+,,,
+otras,Otras (especificar):,,
+,,,
+otras_especifi,Otras lesiones post-operatorias (especificar),,
+,,,
+otros_tt,Otros tratamientos,,
+,,,
+p53_ihq,p53 IHQ,1,Normal
+p53_ihq,p53 IHQ,2,Anormal
+p53_ihq,p53 IHQ,3,No realizada
+,,,
+p53_molecular,p53 Molecular,1,Mutado / anormal
+p53_molecular,p53 Molecular,2, No mutado / wild-type
+p53_molecular,p53 Molecular,3, No realizada
+,,,
+perdida_hematic,Pérdida hemática:,0,No
+perdida_hematic,Pérdida hemática:,1,Si
+,,,
+perdida_hem_cc,Pérdida hemática estimada (cc),,
+,,,
+Perforacion_uterina,Ruptura uterina,0,No
+Perforacion_uterina,Ruptura uterina,1,Si
+,,,
+pms2,PMS2,0,Normal
+pms2,PMS2,1,Anormal
+pms2,PMS2,2,No realizado
+,,,
+presntado_cTG,¿El caso fue presentado al comite de tumores ginecologicos (CTG) antes de recibir tto primario?,0,No
+presntado_cTG,¿El caso fue presentado al comite de tumores ginecologicos (CTG) antes de recibir tto primario?,1,Si
+presntado_cTG,¿El caso fue presentado al comite de tumores ginecologicos (CTG) antes de recibir tto primario?,2,Se desconoce
+,,,
+qt,¿Tributaria a tratamiento sistemico?,0,No
+qt,¿Tributaria a tratamiento sistemico?,1,Si
+,,,
+rdt,Lugar de Radioterapia,0,RT indicada pero no realizada
+rdt,Lugar de Radioterapia,1,Pelvica
+rdt,Lugar de Radioterapia,2,Campo ampliado (pelvica+ParaAo)
+,,,
+recep_est_porcent,Receptores de Estrogenos (Porcentaje),,
+,,,
+rece_de_Ppor,Receptores de Progesterona (Porcentaje),,
+,,,
+reintervencion,Reintervención,0,No
+reintervencion,Reintervención,1,Si
+,,,
+reintervencion_motivo,Reintervención_motivo,,
+,,,
+rt_dosis,RT Dosis,0,No realizada
+rt_dosis,RT Dosis,1,Dosis parcial
+rt_dosis,RT Dosis,2,Dosis completa
+,,,
+tamano_tumoral,Tamaño tumoral (cm),,
+,,,
+tc_gc,Técnica/Ganglio Centinela,0,No
+tc_gc,Técnica/Ganglio Centinela,1,Si
+,,,
+tec_anex_avan,Técnica Anexectomía,0,Unilateral
+tec_anex_avan,Técnica Anexectomía,1,Bilateral
+tec_anex_avan,Técnica Anexectomía,2,No se realiza
+,,,
+tec_apendic,Téc apendicectomía,0,Si
+tec_apendic,Téc apendicectomía,1,No
+tec_apendic,Téc apendicectomía,2,No aplica
+,,,
+tec_biop_periAvn,Técnica Biopsias Peritoneales Múltiples,0,Si
+tec_biop_periAvn,Técnica Biopsias Peritoneales Múltiples,1,No
+,,,
+tec_especnectom,Téc. Especnectomía,0,Si
+tec_especnectom,Téc. Especnectomía,1,No
+,,,
+Tec_histerec,Técnica histerectomía,0,No
+Tec_histerec,Técnica histerectomía,1,Si
+,,,
+tec_linfad_avan,Técnica Linfadectomía Pélvica,0,Derecha
+tec_linfad_avan,Técnica Linfadectomía Pélvica,1,Izquierda
+tec_linfad_avan,Técnica Linfadectomía Pélvica,2,Bilateral
+tec_linfad_avan,Técnica Linfadectomía Pélvica,3,No se realiza
+,,,
+tec_linfaPor_Av,Técnica Linfadectomía Paraortica,0,Inframesenterica
+tec_linfaPor_Av,Técnica Linfadectomía Paraortica,1,supramesenterica
+tec_linfaPor_Av,Técnica Linfadectomía Paraortica,2,Completa (infra +supra)
+tec_linfaPor_Av,Técnica Linfadectomía Paraortica,3,No se realiza
+,,,
+tec_linf_para,Técnica/Linfadenectomía Paraórtica,0,No realizada
+tec_linf_para,Técnica/Linfadenectomía Paraórtica,1,Inframesentérica
+tec_linf_para,Técnica/Linfadenectomía Paraórtica,2,Supramesentérica
+tec_linf_para,Técnica/Linfadenectomía Paraórtica,3,Completa (infra y supra)
+,,,
+tec_linf_pelv,Técnica/Linfadenectomía Pélvica,0,No realizada
+tec_linf_pelv,Técnica/Linfadenectomía Pélvica,1,Derecha
+tec_linf_pelv,Técnica/Linfadenectomía Pélvica,2,Izquierda
+tec_linf_pelv,Técnica/Linfadenectomía Pélvica,3,Bilateral
+,,,
+tec_pelviperito,Téc Pelviperitonectomia,0,Si
+tec_pelviperito,Téc Pelviperitonectomia,1,No
+,,,
+tec_Qx,Tipo de técnica quirúrgica para CE,0,Inicial
+tec_Qx,Tipo de técnica quirúrgica para CE,1,Avanzado
+tec_Qx,Tipo de técnica quirúrgica para CE,2,Estadiaje
+,,,
+tec_Qx_avanz,Otras Técnicas realizadas,,
+,,,
+tec_rectosigmo,Téc. Rectosigmoidectomia,0,Si
+tec_rectosigmo,Téc. Rectosigmoidectomia,1,No
+,,,
+tec_strip_diafg,Téc. de Stripping Diafragmático,0,Si
+tec_strip_diafg,Téc. de Stripping Diafragmático,1,No
+,,,
+tiempo_qx,Tiempo Quirúrgico (min),,
+,,,
+tiempo_transcur,Tiempo transcurrido dx a qx,,
+,,,
+transf_GRC,Nº de concentrados de GRC,,
+,,,
+Tratamiento_sistemico_realizad,Tratamiento sistemico realizado (QT estándar),0,No realizada
+Tratamiento_sistemico_realizad,Tratamiento sistemico realizado (QT estándar),1,Dosis parcial
+Tratamiento_sistemico_realizad,Tratamiento sistemico realizado (QT estándar),2,Dosis completa
+,,,
+trazador_utiliz,Trazador utilizado en Tecnica de GC,0,Verde de indocianina
+trazador_utiliz,Trazador utilizado en Tecnica de GC,1,Otros
+,,,
+Tributaria_a_Radioterapia,¿Tributaria a Radioterapia?,0,No
+Tributaria_a_Radioterapia,¿Tributaria a Radioterapia?,1,Si
+,,,
+tto_1_quirugico,Tratamiento 1º quirugico,0,No
+tto_1_quirugico,Tratamiento 1º quirugico,1,Si
+,,,
+tto_NA,Tratamiento Neo adyuvante,0,No
+tto_NA,Tratamiento Neo adyuvante,1,Si
+,,,
+tt_o_f_fin,Fecha fin,,
+,,,
+tt_o_f_ini,Fecha inicio,,
+,,,
+tx_anexial,Tumoración Anexial,0,No
+tx_anexial,Tumoración Anexial,1,Derecha
+tx_anexial,Tumoración Anexial,2,Izquierda
+tx_anexial,Tumoración Anexial,3,Bilateral
+,,,
+tx_sincronico,Tumor Sincrónico,0,No
+tx_sincronico,Tumor Sincrónico,1,Si
+,,,
+ultraestidaije_GC,¿Se realizó ultraestadiaje del SLN?,0,No
+ultraestidaije_GC,¿Se realizó ultraestadiaje del SLN?,1,Si
+,,,
+,,,
+SEGUIMIENTO,,,
+,,,
+variable,DescripciÃ³n,valor,texto
+causa_muerte,Causa de muerte:,0,Por el cáncer de endometrio
+causa_muerte,Causa de muerte:,1,Otras causas
+,,,
+comentarios,Comentarios,,
+,,,
+dx_recidiva,Diagnóstico ,0,Clinico
+dx_recidiva,Diagnóstico ,1,Prueba complementaria
+,,,
+est_pcte,Estado actual de la paciente,1,Viva
+est_pcte,Estado actual de la paciente,2,Muerta
+est_pcte,Estado actual de la paciente,3,Desconocido
+,,,
+fecha_de_recidi,Fecha de Recidiva,,
+,,,
+f_muerte,Fecha muerte,,
+,,,
+libre_enferm,Libre de enfermedad,0,No
+libre_enferm,Libre de enfermedad,1,Si
+libre_enferm,Libre de enfermedad,2,Desconocido
+,,,
+loc_recidiva,Lugar de Recidiva,1,Pélvica
+loc_recidiva,Lugar de Recidiva,2,Nodal
+loc_recidiva,Lugar de Recidiva,3,A distancia
+loc_recidiva,Lugar de Recidiva,4,NO CONSTA
+loc_recidiva,Lugar de Recidiva,5,Vaginal
+loc_recidiva,Lugar de Recidiva,6,Peritoneal
+,,,
+numero_de_recid,Número de Recidiva,,
+,,,
+num_recidiva,Número,1,Única
+num_recidiva,Número,2,Múltiple
+,,,
+otro_ttIQ_recid,Especificar otro ttoIQ,,
+,,,
+recidiva,Recidiva,0,No
+recidiva,Recidiva,1,Sí
+recidiva,Recidiva,2,Desconocido
+,,,
+recid_super_1,"Especificar si ha sido más de una recidiva, añadir fechas",,
+,,,
+Reseccion_macroscopica_complet,Reseccion macroscopica completa,0,no
+Reseccion_macroscopica_complet,Reseccion macroscopica completa,1,Si
+,,,
+Tratamiento_RT,Tratamiento RT,0,No
+Tratamiento_RT,Tratamiento RT,1,Si
+,,,
+Tratamiento_sistemico,Tratamiento sistemico,0,No
+Tratamiento_sistemico,Tratamiento sistemico,1,Si
+,,,
+tto_recidiva,¿Tipo de tratamiento recibido para la recidiva?,0,No
+tto_recidiva,¿Tipo de tratamiento recibido para la recidiva?,1,Curativo
+tto_recidiva,¿Tipo de tratamiento recibido para la recidiva?,2,Paliativo
+,,,
+Tt_recidiva_qx,Tratamiento Quirúrgico Recidiva,0,No
+Tt_recidiva_qx,Tratamiento Quirúrgico Recidiva,1,Resección local
+Tt_recidiva_qx,Tratamiento Quirúrgico Recidiva,2,Exanteración
+Tt_recidiva_qx,Tratamiento Quirúrgico Recidiva,3,Otros
+,,,
+visita_control,Fecha de ultima visita,,

@@ -141,10 +141,13 @@
                         <label for="asa">Clasificación ASA</label>
                         <select id="asa" name="asa">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="1">ASA I - Paciente sano</option>
-                            <option value="2">ASA II - Enfermedad sistémica leve</option>
-                            <option value="3">ASA III - Enfermedad sistémica grave</option>
-                            <option value="4">ASA IV - Enfermedad grave incapacitante</option>
+                            <option value="0">0 - ASA I</option>
+                            <option value="1">1 - ASA II</option>
+                            <option value="2">2 - ASA III</option>
+                            <option value="3">3 - ASA IV</option>
+                            <option value="4">4 - ASA V</option>
+                            <option value="5">5 - ASA VI</option>
+                            <option value="6">6 - Desconocido</option>
                         </select>
                     </div>
 
@@ -153,13 +156,15 @@
                         <label for="histo_defin">Histología definitiva</label>
                         <select id="histo_defin" name="histo_defin">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="1">Endometrioide</option>
-                            <option value="2">Seroso</option>
-                            <option value="3">Células claras</option>
-                            <option value="4">Carcinosarcoma</option>
-                            <option value="5">Mucinoso</option>
-                            <option value="6">Mixto</option>
-                            <option value="7">Otro</option>
+                            <option value="1">1 - Hiperplasia con atipias</option>
+                            <option value="2">2 - Carcinoma endometrioide</option>
+                            <option value="3">3 - Carcinoma seroso</option>
+                            <option value="4">4 - Carcinoma de células claras</option>
+                            <option value="5">5 - Carcinoma indiferenciado</option>
+                            <option value="6">6 - Carcinoma mixto</option>
+                            <option value="7">7 - Carcinoma escamoso</option>
+                            <option value="8">8 - Carcinosarcoma</option>
+                            <option value="9">9 - Otros</option>
                         </select>
                     </div>
 
@@ -168,9 +173,8 @@
                         <label for="grado_histologi">Grado histológico</label>
                         <select id="grado_histologi" name="grado_histologi">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="1">Grado 1 - Bien diferenciado</option>
-                            <option value="2">Grado 2 - Moderadamente diferenciado</option>
-                            <option value="3">Grado 3 - Poco diferenciado</option>
+                            <option value="1">Grado 1 - Bajo grado (G1-G2)</option>
+                            <option value="2">Grado 2 - Alto grado (G3)</option>
                         </select>
                     </div>
 
@@ -179,10 +183,20 @@
                         <label for="FIGO2023">Estadio FIGO 2023</label>
                         <select id="FIGO2023" name="FIGO2023">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="1">Estadio I</option>
-                            <option value="2">Estadio II</option>
-                            <option value="3">Estadio III</option>
-                            <option value="4">Estadio IV</option>
+                            <option value="1">1 - IA1</option>
+                            <option value="2">2 - IA2</option>
+                            <option value="3">3 - IA3</option>
+                            <option value="4">4 - IB</option>
+                            <option value="5">5 - IC</option>
+                            <option value="6">6 - IIA</option>
+                            <option value="7">7 - IIB</option>
+                            <option value="8">8 - IIC</option>
+                            <option value="9">9 - IIIA</option>
+                            <option value="10">10 - IIIB</option>
+                            <option value="11">11 - IIIC</option>
+                            <option value="12">12 - IVA</option>
+                            <option value="13">13 - IVB</option>
+                            <option value="14">14 - IVC</option>
                         </select>
                     </div>
 
@@ -208,12 +222,14 @@
 
                     <!-- AP Centinela Pélvico -->
                     <div class="form-group">
-                        <label for="AP_centinela_pelvico">AP Ganglio Centinela Pélvico</label>
+                        <label for="AP_centinela_pelvico">AP Centinela Pélvico</label>
                         <select id="AP_centinela_pelvico" name="AP_centinela_pelvico">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="0">Negativo</option>
-                            <option value="1">Positivo</option>
-                            <option value="2">No realizado</option>
+                            <option value="0">0 - Negativo (pN0)</option>
+                            <option value="1">1 - Células tumorales aisladas (pN0(i+))</option>
+                            <option value="2">2 - Micrometástasis (pN1(mi))</option>
+                            <option value="3">3 - Macrometástasis (pN1)</option>
+                            <option value="4">4 - pNx</option>
                         </select>
                     </div>
 
@@ -222,9 +238,10 @@
                         <label for="AP_ganPelv">AP Ganglios Pélvicos</label>
                         <select id="AP_ganPelv" name="AP_ganPelv">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="0">Negativo</option>
-                            <option value="1">Positivo</option>
-                            <option value="2">No realizado</option>
+                            <option value="0">0 - Negativo</option>
+                            <option value="1">1 - Células tumorales aisladas</option>
+                            <option value="2">2 - Micrometástasis</option>
+                            <option value="3">3 - Macrometástasis</option>
                         </select>
                     </div>
 
@@ -233,20 +250,21 @@
                         <label for="AP_glanPaor">AP Ganglios Para-aórticos</label>
                         <select id="AP_glanPaor" name="AP_glanPaor">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="0">Negativo</option>
-                            <option value="1">Positivo</option>
-                            <option value="2">No realizado</option>
+                            <option value="0">0 - Negativo</option>
+                            <option value="1">1 - Células tumorales aisladas</option>
+                            <option value="2">2 - Micrometástasis</option>
+                            <option value="3">3 - Macrometástasis</option>
                         </select>
                     </div>
 
                     <!-- Beta-catenina -->
                     <div class="form-group">
-                        <label for="beta_cateninap">Beta-catenina nuclear</label>
+                        <label for="beta_cateninap">Beta-catenina (Positividad nuclear)</label>
                         <select id="beta_cateninap" name="beta_cateninap">
                             <option value="">-- Seleccione o deje vacío --</option>
-                            <option value="0">Negativo</option>
-                            <option value="1">Positivo</option>
-                            <option value="2">No realizado</option>
+                            <option value="0">0 - No</option>
+                            <option value="1">1 - Sí</option>
+                            <option value="2">2 - No realizado</option>
                         </select>
                     </div>
                 </div>
