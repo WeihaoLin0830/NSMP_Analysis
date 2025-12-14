@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Perfil - NSMP Analysis</title>
+    <title>Perfil Clínico - NSMP Analysis</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/chatbox.css">
 </head>
 <body>
@@ -26,8 +27,9 @@
         <!-- Form Section -->
         <section class="form-section" id="formSection">
             <div class="form-header">
-                <h1>📋 Calculadora de Perfil</h1>
-                <p>Complete la siguiente información para generar su perfil</p>
+                <h1>📋 Perfil Clínico del Paciente</h1>
+                <p>Complete la siguiente información para generar su perfil de riesgo y análisis de supervivencia</p>
+                <p class="form-note">Los campos marcados con <span class="required-mark">*</span> son obligatorios. Deje en blanco si desconoce el valor.</p>
             </div>
 
             <!-- Progress Bar -->
@@ -39,117 +41,269 @@
             </div>
 
             <form id="profileForm" class="card">
-                <!-- Age -->
-                <div class="form-group">
-                    <label for="age">Edad (años)</label>
-                    <input 
-                        type="number" 
-                        id="age" 
-                        name="age" 
-                        min="18" 
-                        max="120" 
-                        placeholder="Introduzca su edad"
-                        required
-                    >
+                <!-- Section: Variables Numéricas -->
+                <div class="form-section-title">
+                    <span class="section-icon">📊</span>
+                    Variables Numéricas
                 </div>
 
-                <!-- BMI -->
-                <div class="form-group">
-                    <label for="bmi">Índice de Masa Corporal (IMC)</label>
-                    <input 
-                        type="number" 
-                        id="bmi" 
-                        name="bmi" 
-                        min="10" 
-                        max="60" 
-                        step="0.1"
-                        placeholder="Introduzca su IMC (ej: 24.5)"
-                        required
-                    >
-                    <small style="color: var(--text-secondary); margin-top: 0.25rem; display: block;">
-                        IMC = peso (kg) / altura² (m²)
-                    </small>
-                </div>
+                <div class="form-grid">
+                    <!-- Edad en cirugía -->
+                    <div class="form-group">
+                        <label for="edad_en_cirugia">Edad en cirugía (años) <span class="required-mark">*</span></label>
+                        <input 
+                            type="number" 
+                            id="edad_en_cirugia" 
+                            name="edad_en_cirugia" 
+                            min="18" 
+                            max="100" 
+                            step="1"
+                            placeholder="Ej: 58"
+                            required
+                        >
+                    </div>
 
-                <!-- Recurrence -->
-                <div class="form-group">
-                    <label>¿Ha tenido recidiva?</label>
-                    <div class="radio-group">
-                        <div class="radio-option">
-                            <input type="radio" id="recurrenceYes" name="recurrence" value="yes" required>
-                            <label for="recurrenceYes">Sí</label>
-                        </div>
-                        <div class="radio-option">
-                            <input type="radio" id="recurrenceNo" name="recurrence" value="no">
-                            <label for="recurrenceNo">No</label>
-                        </div>
+                    <!-- IMC -->
+                    <div class="form-group">
+                        <label for="imc">Índice de Masa Corporal (IMC)</label>
+                        <input 
+                            type="text" 
+                            id="imc" 
+                            name="imc" 
+                            placeholder="Ej: 28.5 (o dejar vacío)"
+                            data-median="30.20"
+                        >
+                        <small class="field-hint">IMC = peso (kg) / altura² (m²). Si no lo sabe, déjelo vacío.</small>
+                    </div>
+
+                    <!-- Valor CA125 -->
+                    <div class="form-group">
+                        <label for="valor_de_ca125">Valor de CA125 (U/mL)</label>
+                        <input 
+                            type="text" 
+                            id="valor_de_ca125" 
+                            name="valor_de_ca125" 
+                            placeholder="Ej: 15.4 (o dejar vacío)"
+                            data-median="3.23"
+                        >
+                        <small class="field-hint">Marcador tumoral. Si no lo sabe, déjelo vacío.</small>
+                    </div>
+
+                    <!-- Tamaño tumoral -->
+                    <div class="form-group">
+                        <label for="tamano_tumoral">Tamaño tumoral (cm)</label>
+                        <input 
+                            type="text" 
+                            id="tamano_tumoral" 
+                            name="tamano_tumoral" 
+                            placeholder="Ej: 2.5 (o dejar vacío)"
+                            data-median="1.39"
+                        >
+                        <small class="field-hint">Tamaño del tumor en centímetros.</small>
+                    </div>
+
+                    <!-- Receptor Estrógeno -->
+                    <div class="form-group">
+                        <label for="recep_est_porcent">Receptores de Estrógeno (%)</label>
+                        <input 
+                            type="text" 
+                            id="recep_est_porcent" 
+                            name="recep_est_porcent" 
+                            placeholder="Ej: 90 (o dejar vacío)"
+                            data-median="0.90"
+                        >
+                        <small class="field-hint">Porcentaje de expresión (0-100 o 0-1).</small>
+                    </div>
+
+                    <!-- Receptor Progesterona -->
+                    <div class="form-group">
+                        <label for="rece_de_Ppor">Receptores de Progesterona (%)</label>
+                        <input 
+                            type="text" 
+                            id="rece_de_Ppor" 
+                            name="rece_de_Ppor" 
+                            placeholder="Ej: 85 (o dejar vacío)"
+                            data-median="0.80"
+                        >
+                        <small class="field-hint">Porcentaje de expresión (0-100 o 0-1).</small>
                     </div>
                 </div>
 
-                <!-- Recurrence Type (conditional) -->
-                <div class="conditional-field" id="recurrenceTypeSection">
+                <!-- Section: Variables Categóricas -->
+                <div class="form-section-title">
+                    <span class="section-icon">📋</span>
+                    Variables Clínicas
+                </div>
+
+                <div class="form-grid">
+                    <!-- ASA -->
                     <div class="form-group">
-                        <label>Tipo de recidiva</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="recurrenceGanglionar" name="recurrenceType" value="ganglionar">
-                                <label for="recurrenceGanglionar">🔵 Ganglionar</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="recurrencePulmonar" name="recurrenceType" value="pulmonar">
-                                <label for="recurrencePulmonar">🫁 Pulmonar</label>
-                            </div>
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="recurrencePeritoneal" name="recurrenceType" value="peritoneal">
-                                <label for="recurrencePeritoneal">🟣 Peritoneal</label>
-                            </div>
-                        </div>
+                        <label for="asa">Clasificación ASA</label>
+                        <select id="asa" name="asa">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="1">ASA I - Paciente sano</option>
+                            <option value="2">ASA II - Enfermedad sistémica leve</option>
+                            <option value="3">ASA III - Enfermedad sistémica grave</option>
+                            <option value="4">ASA IV - Enfermedad grave incapacitante</option>
+                        </select>
+                    </div>
+
+                    <!-- Histología definitiva -->
+                    <div class="form-group">
+                        <label for="histo_defin">Histología definitiva</label>
+                        <select id="histo_defin" name="histo_defin">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="1">Endometrioide</option>
+                            <option value="2">Seroso</option>
+                            <option value="3">Células claras</option>
+                            <option value="4">Carcinosarcoma</option>
+                            <option value="5">Mucinoso</option>
+                            <option value="6">Mixto</option>
+                            <option value="7">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Grado histológico -->
+                    <div class="form-group">
+                        <label for="grado_histologi">Grado histológico</label>
+                        <select id="grado_histologi" name="grado_histologi">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="1">Grado 1 - Bien diferenciado</option>
+                            <option value="2">Grado 2 - Moderadamente diferenciado</option>
+                            <option value="3">Grado 3 - Poco diferenciado</option>
+                        </select>
+                    </div>
+
+                    <!-- FIGO 2023 -->
+                    <div class="form-group">
+                        <label for="FIGO2023">Estadio FIGO 2023</label>
+                        <select id="FIGO2023" name="FIGO2023">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="1">Estadio I</option>
+                            <option value="2">Estadio II</option>
+                            <option value="3">Estadio III</option>
+                            <option value="4">Estadio IV</option>
+                        </select>
+                    </div>
+
+                    <!-- Afectación linfovascular -->
+                    <div class="form-group">
+                        <label for="afectacion_linf">Afectación linfovascular</label>
+                        <select id="afectacion_linf" name="afectacion_linf">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">No</option>
+                            <option value="1">Sí</option>
+                        </select>
+                    </div>
+
+                    <!-- Metástasis a distancia -->
+                    <div class="form-group">
+                        <label for="metasta_distan">Metástasis a distancia</label>
+                        <select id="metasta_distan" name="metasta_distan">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">No</option>
+                            <option value="1">Sí</option>
+                        </select>
+                    </div>
+
+                    <!-- AP Centinela Pélvico -->
+                    <div class="form-group">
+                        <label for="AP_centinela_pelvico">AP Ganglio Centinela Pélvico</label>
+                        <select id="AP_centinela_pelvico" name="AP_centinela_pelvico">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">Negativo</option>
+                            <option value="1">Positivo</option>
+                            <option value="2">No realizado</option>
+                        </select>
+                    </div>
+
+                    <!-- AP Ganglios Pélvicos -->
+                    <div class="form-group">
+                        <label for="AP_ganPelv">AP Ganglios Pélvicos</label>
+                        <select id="AP_ganPelv" name="AP_ganPelv">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">Negativo</option>
+                            <option value="1">Positivo</option>
+                            <option value="2">No realizado</option>
+                        </select>
+                    </div>
+
+                    <!-- AP Ganglios Para-aórticos -->
+                    <div class="form-group">
+                        <label for="AP_glanPaor">AP Ganglios Para-aórticos</label>
+                        <select id="AP_glanPaor" name="AP_glanPaor">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">Negativo</option>
+                            <option value="1">Positivo</option>
+                            <option value="2">No realizado</option>
+                        </select>
+                    </div>
+
+                    <!-- Beta-catenina -->
+                    <div class="form-group">
+                        <label for="beta_cateninap">Beta-catenina nuclear</label>
+                        <select id="beta_cateninap" name="beta_cateninap">
+                            <option value="">-- Seleccione o deje vacío --</option>
+                            <option value="0">Negativo</option>
+                            <option value="1">Positivo</option>
+                            <option value="2">No realizado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Section: Variables desde biopsia preoperatoria -->
+                <div class="form-section-title">
+                    <span class="section-icon">🔬</span>
+                    Información Preoperatoria
+                    <span class="section-subtitle">(Marque si el valor proviene de biopsia preoperatoria)</span>
+                </div>
+
+                <div class="checkbox-grid">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="histo_defin__from_pre" name="histo_defin__from_pre">
+                        <label for="histo_defin__from_pre">Histología desde biopsia preoperatoria</label>
+                    </div>
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="grado_histologi__from_pre" name="grado_histologi__from_pre">
+                        <label for="grado_histologi__from_pre">Grado desde biopsia preoperatoria</label>
+                    </div>
+
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="FIGO2023__from_pre" name="FIGO2023__from_pre">
+                        <label for="FIGO2023__from_pre">FIGO desde evaluación preoperatoria</label>
                     </div>
                 </div>
 
                 <!-- Submit Button -->
-                <div style="text-align: center; margin-top: 2rem;">
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">
+                        <span>🔄</span> Limpiar formulario
+                    </button>
                     <button type="submit" class="btn btn-primary">
-                        Generar Perfil
-                        <span>✨</span>
+                        <span>✨</span> Generar Perfil de Riesgo
                     </button>
                 </div>
             </form>
         </section>
 
+        <!-- Loading Section -->
+        <section class="loading-section card" id="loadingSection" style="display: none;">
+            <div class="loading-spinner"></div>
+            <h2>Analizando perfil...</h2>
+            <p>Procesando datos clínicos y calculando riesgo de supervivencia</p>
+        </section>
+
         <!-- Result Section -->
-        <section class="result-section card" id="resultSection">
-            <div class="result-icon">✅</div>
-            <h2 class="result-title">Perfil Generado Correctamente</h2>
-            <p style="color: var(--text-secondary);">
-                A continuación se muestra un resumen de la información proporcionada.
-            </p>
-
-            <div class="result-summary" id="resultSummary">
-                <!-- Results will be populated by JavaScript -->
-            </div>
-
-            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <button class="btn btn-secondary" onclick="resetForm()">
-                    <span>←</span>
-                    Nuevo Perfil
-                </button>
-                <button class="btn btn-primary" onclick="window.print()">
-                    <span>🖨️</span>
-                    Imprimir
-                </button>
-            </div>
+        <section class="result-section" id="resultSection" style="display: none;">
+            <!-- Results will be populated by JavaScript -->
         </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>
-            Desarrollado con 💜 para el proyecto BitsxMT25
-        </p>
-        <p style="margin-top: 0.5rem;">
-            <small>Esta herramienta es informativa y no sustituye la consulta médica profesional.</small>
-        </p>
+        <p>Desarrollado con 💜 para el proyecto BitsxMT25</p>
+        <p><small>Esta herramienta es informativa y no sustituye la consulta médica profesional.</small></p>
     </footer>
 
     <script src="js/calculator.js"></script>

@@ -270,9 +270,102 @@ app.get('/api/chat/status', async (req, res) => {
     }
 });
 
+// ===== Clustering API Proxy =====
+const CLUSTERING_API_URL = process.env.CLUSTERING_API_URL || 'http://localhost:8001';
+
+// Doctor search page
+app.get('/doctor-search', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'doctor-search.html'));
+});
+
+// Predict for new patient (from calculator form)
+app.post('/api/predict', async (req, res) => {
+    try {
+        const response = await fetch(`${CLUSTERING_API_URL}/predict`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(req.body)
+        });
+        
+        if (!response.ok) {
+            throw new Error(`Clustering API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('Prediction API error:', error);
+        res.status(500).json({ 
+            success: false,
+            error: 'Error communicating with clustering service',
+            message: error.message 
+        });
+    }
+});
+
+// Get all patients (for doctor search)
+app.get('/api/patients', async (req, res) => {
+    try {
+        const response = await fetch(`${CLUSTERING_API_URL}/patients`);
+        
+        if (!response.ok) {
+            throw new Error(`Clustering API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('Patients API error:', error);
+        res.status(500).json({ 
+            success: false,
+            error: 'Error fetching patient list',
+            message: error.message 
+        });
+    }
+});
+
+// Get specific patient by index
+app.get('/api/patients/:index', async (req, res) => {
+    try {
+        const response = await fetch(`${CLUSTERING_API_URL}/patients/${req.params.index}`);
+        
+        if (!response.ok) {
+            if (response.status === 404) {
+                return res.status(404).json({ 
+                    success: false, 
+                    error: 'Patient not found' 
+                });
+            }
+            throw new Error(`Clustering API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        res.json(data);
+    } catch (error) {
+        console.error('Patient lookup error:', error);
+        res.status(500).json({ 
+            success: false,
+            error: 'Error fetching patient data',
+            message: error.message 
+        });
+    }
+});
+
+// Check clustering service status
+app.get('/api/clustering/status', async (req, res) => {
+    try {
+        const response = await fetch(`${CLUSTERING_API_URL}/health`);
+        const data = await response.json();
+        res.json({ available: true, ...data });
+    } catch (error) {
+        res.json({ available: false, message: 'Clustering service not available' });
+    }
+});
+
 app.listen(PORT, () => {
     console.log(`🏥 Server running at http://localhost:${PORT}`);
     console.log('📋 Role selection: http://localhost:${PORT}/role-select');
     console.log(`🤖 RAG API expected at: ${RAG_API_URL}`);
+    console.log(`🔬 Clustering API expected at: ${CLUSTERING_API_URL}`);
     console.log('Press Ctrl+C to stop');
 });

@@ -121,7 +121,7 @@
         function selectRole(role) {
             localStorage.setItem('userRole', role);
             if (role === 'doctor') {
-                window.location.href = '/dashboard';
+                window.location.href = '/doctor-search';
             } else {
                 window.location.href = '/calculator';
             }
